@@ -1,0 +1,163 @@
+name: Build & Publish Pandora Update (Windows, Option B)
+
+on:
+  push:
+    tags:
+      - 'v*'    # z.B. v1.8.4
+
+jobs:
+  build-release:
+    runs-on: windows-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
+    env:
+      PYTHONUTF8: "1"
+
+    steps:
+      - name: Checkout code (private repo)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install build deps (briefcase, cryptography)
+        run: |
+          python -m pip install --upgrade pip
+          pip install briefcase cryptography
+
+      - name: Compute version from tag
+        id: v
+        shell: bash
+        run: |
+          TAG="${GITHUB_REF_NAME}"   # e.g. v1.8.4
+          echo "tag=${TAG}" >> $GITHUB_OUTPUT
+          echo "version=${TAG#v}" >> $GITHUB_OUTPUT
+
+      # ---- Briefcase Build (ohne package) ----
+      - name: Briefcase create/build (Windows)
+        shell: pwsh
+        run: |
+          briefcase create windows
+          briefcase build windows
+
+      # ---- Overlay aus dem Briefcase-Build extrahieren ----
+      - name: Locate Briefcase app folder
+        id: locate
+        shell: pwsh
+        run: |
+          # Finde den Ordner, der eine "app"-Subdir enthält (Briefcase-Struktur)
+          $appDirs = Get-ChildItem -Path . -Recurse -Directory -Filter "app" `
+            | Where-Object { Test-Path (Join-Path $_.FullName "__init__.py") -or `
+                             Test-Path (Join-Path $_.FullName "pandora") }
+          if (-not $appDirs) {
+            # Fallback: suche unter windows\* nach "app"
+            $appDirs = Get-ChildItem -Path "windows" -Recurse -Directory -Filter "app"
+          }
+          if (-not $appDirs) {
+            Write-Error "Konnte keinen Briefcase 'app'-Ordner finden."
+            exit 1
+          }
+          # Nimm den ersten Treffer (meist: windows\Pandora\Pandora\app)
+          $appPath = $appDirs[0].FullName
+          Write-Host "Found app folder: $appPath"
+          echo "appPath=$appPath" >> $env:GITHUB_OUTPUT
+
+          # Optional: assets-Verzeichnis in Nachbarschaft (Resources\assets o.ä.)
+          $assetsCandidates = @(
+            (Join-Path (Split-Path $appPath -Parent) "resources\assets"),
+            (Join-Path (Split-Path (Split-Path $appPath -Parent) -Parent) "resources\assets")
+          ) | Where-Object { Test-Path $_ }
+          if ($assetsCandidates.Count -gt 0) {
+            echo "assetsPath=$($assetsCandidates[0])" >> $env:GITHUB_OUTPUT
+            Write-Host "Found assets folder: $($assetsCandidates[0])"
+          } else {
+            echo "assetsPath=" >> $env:GITHUB_OUTPUT
+            Write-Host "No assets folder found (that's fine)."
+          }
+
+      - name: Assemble overlay root from build (Option B)
+        shell: pwsh
+        run: |
+          $VERSION = "${{ steps.v.outputs.version }}"
+          $OVERLAY = "dist/pandora-$VERSION"
+          New-Item -ItemType Directory -Force -Path $OVERLAY | Out-Null
+
+          # 1) App-Quellcode kopieren (nur unser Paket 'pandora', keine app_packages)
+          $appPath = "${{ steps.locate.outputs.appPath }}"
+          if (-not (Test-Path $appPath)) { Write-Error "appPath not found"; exit 1 }
+
+          # kopiere nur das Paket "pandora" aus dem app-Ordner
+          $srcPandora = Join-Path $appPath "pandora"
+          if (Test-Path $srcPandora) {
+            robocopy $srcPandora (Join-Path $OVERLAY "pandora") /E /NFL /NDL /NJH /NJS /NP | Out-Null
+          } else {
+            # Fallback: falls der app-Ordner bereits direkt das Paket enthält
+            robocopy $appPath (Join-Path $OVERLAY "pandora") /E /XD "app_packages" /NFL /NDL /NJH /NJS /NP | Out-Null
+          }
+
+          # 2) Optional: Assets aus Resources übernehmen, falls vorhanden
+          $assetsPath = "${{ steps.locate.outputs.assetsPath }}"
+          if ($assetsPath -and (Test-Path $assetsPath)) {
+            robocopy $assetsPath (Join-Path $OVERLAY "assets") /E /NFL /NDL /NJH /NJS /NP | Out-Null
+          }
+
+          # 3) __pycache__ entfernen
+          Get-ChildItem -Path $OVERLAY -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+
+          Write-Host "Overlay root assembled at $OVERLAY"
+          Get-ChildItem -Recurse $OVERLAY
+
+      - name: Restore signing key
+        shell: pwsh
+        env:
+          PANDORA_UPDATE_PRIVATE_PEM: ${{ secrets.PANDORA_UPDATE_PRIVATE_PEM }}
+        run: |
+          if (-not "$env:PANDORA_UPDATE_PRIVATE_PEM") { Write-Error "Secret PANDORA_UPDATE_PRIVATE_PEM fehlt"; exit 1 }
+          Set-Content -Path pandora_update_private.pem -Value $env:PANDORA_UPDATE_PRIVATE_PEM
+
+      - name: Build manifest + ZIPs
+        shell: pwsh
+        run: |
+          $VERSION = "${{ steps.v.outputs.version }}"
+          python .github/workflows/pandora_manifest_tool.py build `
+            --app-name Pandora --channel stable `
+            --version $VERSION --build $env:GITHUB_RUN_NUMBER `
+            --new-root "dist/pandora-$VERSION" `
+            --cdn-base "https://raw.githubusercontent.com/${{ github.repository_owner }}/pandora-updates/main" `
+            --out-dir "out/$VERSION" `
+            --private-key pandora_update_private.pem
+
+          Get-ChildItem -Recurse "out/$VERSION"
+
+      - name: Checkout public updates repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/pandora-updates
+          path: updates-repo
+          token: ${{ secrets.UPDATES_REPO_TOKEN }}
+
+      - name: Copy artifacts into updates repo
+        shell: pwsh
+        run: |
+          $VERSION = "${{ steps.v.outputs.version }}"
+          New-Item -ItemType Directory -Force -Path "updates-repo/$VERSION" | Out-Null
+          Copy-Item -Recurse -Force "out/$VERSION/*" "updates-repo/$VERSION/"
+          New-Item -ItemType Directory -Force -Path "updates-repo/stable" | Out-Null
+          Copy-Item -Force "out/$VERSION/manifest.json" "updates-repo/stable/manifest.json"
+
+      - name: Commit & push
+        shell: pwsh
+        run: |
+          Set-Location updates-repo
+          git config user.name "pandora-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          git commit -m "Publish ${{ steps.v.outputs.version }}"
+          git push
