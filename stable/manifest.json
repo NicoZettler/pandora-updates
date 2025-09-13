@@ -4292,10 +4292,10 @@
       "size": 48
     }
   ],
-  "notes_url": "https://github.com/NicoZettler/pandora-updates/releases/download/0.9.8-test/release-notes.html",
+  "notes_url": "https://github.com/NicoZettler/pandora-updates/releases/download/v0.9.8-test/release-notes.html",
   "sig": {
     "alg": "ed25519",
     "manifest_sig_b64": "tdosPj5+85wdX0zS97kp2is8IJsL6/XnLuBeeGN3rzYe/K8vLewTpaVizLzEEzWOSsP/F+Ue484i1oYkuAEAAQ=="
   },
-  "full_url": "https://github.com/NicoZettler/pandora-updates/releases/download/0.9.8-test/pandora-0.9.8-test-full.zip"
+  "full_url": "https://github.com/NicoZettler/pandora-updates/releases/download/v0.9.8-test/pandora-0.9.8-test-full.zip"
 }
