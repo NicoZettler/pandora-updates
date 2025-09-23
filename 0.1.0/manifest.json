@@ -2,19 +2,804 @@
   "app": "Pandora",
   "channel": "stable",
   "version": "0.1.0",
-  "build": 20,
+  "build": 7,
   "release_date": "2025-09-23",
   "min_bootstrap": "1.0.0",
   "files": [
+    {
+      "path": "pandora/DOE/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/DOE/designOfExperiments.py",
+      "sha256": "a412c5a03d2eafc6f895bcea38fad33ae9857d23c1dce2004e129c774668bc72",
+      "size": 41641
+    },
+    {
+      "path": "pandora/DOE/doe_factorial.py",
+      "sha256": "9fb29a387f2d855b8d74838b486c8ffce888cfdf36de77a1bc0728ab67e5a6eb",
+      "size": 9599
+    },
+    {
+      "path": "pandora/DOE/doe_taguchi.py",
+      "sha256": "92a64187c8566c2bde3b1a9bf984650744f62be01d24a716aa65a4b419850c3d",
+      "size": 7848
+    },
+    {
+      "path": "pandora/FDM_printing/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/FDM_printing/printing_fdm.py",
+      "sha256": "60f16cf49a014c247ae3d0e1279acfd1e68cbc126d95d71080ba6b6cfbe207a8",
+      "size": 30205
+    },
     {
       "path": "pandora/GLOBALS.py",
       "sha256": "e6806b3cd976646f6a70fcf1975498ace3639197566559964023011fef9d14aa",
       "size": 12236
     },
     {
+      "path": "pandora/GUI/MainWindow.py",
+      "sha256": "bb8c66a9692f35dd2866836a04c2ff1f2db9ba3f622ed26ef37b690a473a3939",
+      "size": 23505
+    },
+    {
+      "path": "pandora/GUI/QToggle.py",
+      "sha256": "97f083e0ef05e674e9cb1ee3079d9894d705287f0aa221dceba4bad8f136b5b7",
+      "size": 8710
+    },
+    {
+      "path": "pandora/GUI/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/GUI/basicWindows.py",
+      "sha256": "b27e72c40bddd099ef2f59cae4f43671ee1c231c2b52fb024198bd56c1914ec3",
+      "size": 6311
+    },
+    {
+      "path": "pandora/GUI/guiVisibility.py",
+      "sha256": "6ad58c6e25f8f4ef329b6aedf74b9829e9fda7f9c925ad364911be9a7c3c1e0b",
+      "size": 6377
+    },
+    {
+      "path": "pandora/GUI/ledIndicatorWidget.py",
+      "sha256": "bd2076df5ac76df0fc6aaedac80047e0d28cf147d7705f636addafad1c3b2a4b",
+      "size": 2867
+    },
+    {
+      "path": "pandora/GUI/mplwidget.py",
+      "sha256": "bf707295ffcc9a2ec577d19fb3edd973ea273701b364c5501be17e39ba18dacf",
+      "size": 39735
+    },
+    {
+      "path": "pandora/GUI/plotly_utils.py",
+      "sha256": "b2306e47c0207aef9b0df6c71a0c6142d3d14387916d4a78c8f78572d17fb2a1",
+      "size": 7579
+    },
+    {
+      "path": "pandora/GUI/plotlywidget.py",
+      "sha256": "ad1a06b12ab61c71ce0eb65a2f447ec118f0c791d11493f6ecc506830416f66c",
+      "size": 44841
+    },
+    {
+      "path": "pandora/GUI/popUpWindow.py",
+      "sha256": "984c6507c7cb1af748779804d5e69cbde00781632b071565117e79e938c0b3b5",
+      "size": 660
+    },
+    {
+      "path": "pandora/GUI/pyqtGraphWidget.py",
+      "sha256": "7b49f4d87b6c4666330ff2524953af739e349014cd2d6015f12a663480fa76e7",
+      "size": 17261
+    },
+    {
+      "path": "pandora/GUI/pyqtImport.py",
+      "sha256": "dc3b92c46947ee2bafe1fada3ba0da57fc5578bbd97c94ef349ade3342fda739",
+      "size": 1530
+    },
+    {
+      "path": "pandora/GUI/settings/APMDesigner.ini",
+      "sha256": "b240f52b364e3137df1a4b133ba6936b1ed9f91e18a7386a3097b2bbb1b58ff1",
+      "size": 723
+    },
+    {
+      "path": "pandora/GUI/settings/CrossSectionWindow.ini",
+      "sha256": "36447194f78040a78b396ec51997d205d478f560ce8bf85f5b2648d0c96a5c0b",
+      "size": 69
+    },
+    {
+      "path": "pandora/GUI/settings/ExperimentAnalyzer.ini",
+      "sha256": "37efd5e0ae19673e8a8cbcd673017fc9eaa281f1d05af055efc60a5b6a487641",
+      "size": 100
+    },
+    {
+      "path": "pandora/GUI/settings/FormFitWindow.ini",
+      "sha256": "b9e952f995eed58828f4072d3b7b5a57deefa90077be25a73cdaced7725813e0",
+      "size": 545
+    },
+    {
+      "path": "pandora/GUI/settings/ImageAnalyzerUI.ini",
+      "sha256": "855a7062cc4a552fc40502a1f238f5d6487e15bd21531cf463e82d9e80840a8e",
+      "size": 218
+    },
+    {
+      "path": "pandora/GUI/settings/InterferometryUI.ini",
+      "sha256": "aa7d25e4871ee91b55742634213b77db41e1c3be5e99b7a7134243338387e073",
+      "size": 95
+    },
+    {
+      "path": "pandora/GUI/settings/MAPS.ini",
+      "sha256": "de00448c664081faaf3f91a33d56bf67996dd9766a85d061888e8908a59e9a9b",
+      "size": 616
+    },
+    {
+      "path": "pandora/GUI/settings/MAPSAnalysis.ini",
+      "sha256": "33c1a999276134eb5917d5a4c5e0be8c4f3556eb65e225e0583e1b1366aa41c6",
+      "size": 323
+    },
+    {
+      "path": "pandora/GUI/settings/MAPSAnalysisUI.ini",
+      "sha256": "844c1c38c056cdfecfd99c5819bfa169c96b79d6165ea45d765913713c062ecb",
+      "size": 325
+    },
+    {
+      "path": "pandora/GUI/settings/MAPSSettingsUI.ini",
+      "sha256": "3b143ea237ab06095dd63f093f3a3bb61aa90593d1725a437b4e776ed92316f6",
+      "size": 2176
+    },
+    {
+      "path": "pandora/GUI/settings/MAPSSimulation.ini",
+      "sha256": "89e8ff25326c75c27e7b71bbb7fa57f774e1ef68c9b6d2de777ceffae45e52bc",
+      "size": 473
+    },
+    {
+      "path": "pandora/GUI/settings/MachineComUI.ini",
+      "sha256": "e842a2a5f0f88ced50427288312311a3e12bd6c28c22f4e941f0ac1d68057beb",
+      "size": 111
+    },
+    {
+      "path": "pandora/GUI/settings/MachineControlUI.ini",
+      "sha256": "c088b1380b604ef5a94a467f3be683a93ac5bbd2541d7823a913ea6d4951c318",
+      "size": 511
+    },
+    {
+      "path": "pandora/GUI/settings/MarkingDetectionWindow.ini",
+      "sha256": "c4fd622b4c53b5727af44f5759378c44dce27cc873da5cb4eb48ff91b7a89be4",
+      "size": 3015039
+    },
+    {
+      "path": "pandora/GUI/settings/MarkingDetectionWindow2.ini",
+      "sha256": "5c830e34321c3c2cfbc24fcb96d4fe23e17cf1f0275f32b732a65b44a999f074",
+      "size": 494
+    },
+    {
+      "path": "pandora/GUI/settings/PadConditionAnalysis.ini",
+      "sha256": "77c7c10b4c860d5ddf4e057e713383e61e9f21bcf0ec4cfbbc16193f2e28f340",
+      "size": 11
+    },
+    {
+      "path": "pandora/GUI/settings/PlotDataUI.ini",
+      "sha256": "bfdfdab327140e3937caad67707a00c0b1e79ee639c5ca5dae31127a297a119c",
+      "size": 63
+    },
+    {
+      "path": "pandora/GUI/settings/PlotDataUI.ini.vKASgC",
+      "sha256": "7b29428c6bb1216ad492783ef6d7c7cfa8be02a51a12a74e302e85a35ecff84e",
+      "size": 65
+    },
+    {
+      "path": "pandora/GUI/settings/PlotIsotropic2dPsdUI.ini",
+      "sha256": "9a2c44d5bc459482300b01763beb9af727bc8fcfc3942a9b256492794bb63892",
+      "size": 89
+    },
+    {
+      "path": "pandora/GUI/settings/PlotSurfaceUI.ini",
+      "sha256": "8555d217df1a97140c538e0a4264601da7bd63aee0864a13bc3cfcc75f64ea22",
+      "size": 136
+    },
+    {
+      "path": "pandora/GUI/settings/Plotly3DSurfaceWindow.ini",
+      "sha256": "4fb657c7b716224e62288b6a6ccbd0afd3967331f64820345c2accbbf9f3eb3a",
+      "size": 41
+    },
+    {
+      "path": "pandora/GUI/settings/PolishingImagesUI.ini",
+      "sha256": "d54a2d32281b7637732cc13d0b76d39942f88c5fcd3464b21c52eae2836dca0e",
+      "size": 340
+    },
+    {
+      "path": "pandora/GUI/settings/PolishingImaging.ini",
+      "sha256": "33b88ee70cf03d1b55f9d19e20ccb9c19742fb6c243022b0c11150669dc51de9",
+      "size": 118
+    },
+    {
+      "path": "pandora/GUI/settings/ProcessPolishingImagesUI.ini",
+      "sha256": "a74cf562959f1218c06b26d0d9df7f83f0bb924c517e8b4328130d53d26a0916",
+      "size": 239
+    },
+    {
+      "path": "pandora/GUI/settings/RemoveOutliersWindow.ini",
+      "sha256": "34e18b3f9cea897fd05d3257e27cd4435ba68dffada22c3c5c312d5010afb6d0",
+      "size": 88
+    },
+    {
+      "path": "pandora/GUI/settings/SettingsUI.ini",
+      "sha256": "c66dc8b1f2485c224ed49d41f1383147be1fa6e3fc153f18691869a75346c9c6",
+      "size": 194
+    },
+    {
+      "path": "pandora/GUI/settings/TransformDataWindow.ini",
+      "sha256": "05bed96388cd8d4c4058a1811c949eb9ca8263bc803953b0643e72bd1be37def",
+      "size": 31
+    },
+    {
+      "path": "pandora/GUI/settings/ZoomSurfaceWindow.ini",
+      "sha256": "ff18cf5a6ce53bbf63c634bb2bdd0be2a25246b8e779643596f5e5542546408a",
+      "size": 200
+    },
+    {
+      "path": "pandora/GUI/settings/delete_file_to_restore_default_values",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/GUI/tablewidget.py",
+      "sha256": "efd564f2a5fd85ae27e022f889637be1768dccaeb5a112fd34f8d88febf4f0bb",
+      "size": 20119
+    },
+    {
+      "path": "pandora/GUI/temp_3D_surface_rendering/opengl_surface_widget.py",
+      "sha256": "56fc32f2a82433add015b5a0971ab4b7406545b77922e11a66118cc464478f3a",
+      "size": 24163
+    },
+    {
+      "path": "pandora/GUI/temp_3D_surface_rendering/quaternion_utils.py",
+      "sha256": "ea6e949b83a16300d21b256ea52cfcfd115bf39997167dbc749d153e4df3572a",
+      "size": 3724
+    },
+    {
+      "path": "pandora/GUI/temp_3D_surface_rendering/scientific_text_renderer.py",
+      "sha256": "a52b373ee47f89e683dd17832b979560c03fea77da7bf3e09c6cd7c5a753e23a",
+      "size": 9426
+    },
+    {
+      "path": "pandora/GUI/ui_files/DOE.ui",
+      "sha256": "aa60bc51a87c873074ffda24aead8f10e9333ed6806e1dbaef7344bfd33d1d46",
+      "size": 118052
+    },
+    {
+      "path": "pandora/GUI/ui_files/MAPS.ui",
+      "sha256": "d726de94605f64b7e989b80c75c7911690ba613cc14460eb5067e2e24e4d78f8",
+      "size": 79255
+    },
+    {
+      "path": "pandora/GUI/ui_files/MAPS_analysis.ui",
+      "sha256": "c29a57ce84cff6f4f4ab5cd5fbd82f1f2993bfbdb9c4e21169977dc37ff511ed",
+      "size": 76978
+    },
+    {
+      "path": "pandora/GUI/ui_files/MAPS_settings.ui",
+      "sha256": "3484369af3f6259ce105aa9a48d0af1d45e12148cc270d4c9034fd5602f0c49f",
+      "size": 146348
+    },
+    {
+      "path": "pandora/GUI/ui_files/MAPS_simulation.ui",
+      "sha256": "11dfbb8c7824ffbd9a03014cd25091c8134d0a2c2e7e48d03a29c2bd719e5483",
+      "size": 82830
+    },
+    {
+      "path": "pandora/GUI/ui_files/PolishingImageAcquisition.ui",
+      "sha256": "ee7d9f438306d8de4f82137c38571a97ad1134f303edf7512b21205d0d89aaa9",
+      "size": 9751
+    },
+    {
+      "path": "pandora/GUI/ui_files/apm_simulation.ui",
+      "sha256": "54b4a8514c5984c155f37c79afeb023d1fe3d2237a0de3e1b2be0b3e277e795d",
+      "size": 32973
+    },
+    {
+      "path": "pandora/GUI/ui_files/coordinate_systems.ui",
+      "sha256": "4276751b16d3fabdce04cb33a7dfbd72a3cae0022d17c0944be1e526f502b411",
+      "size": 10166
+    },
+    {
+      "path": "pandora/GUI/ui_files/data_analysis.ui",
+      "sha256": "524313e744c579091e7dcdf6cfeb530421b0d9db484bd1ae722bc6349e1b16f9",
+      "size": 22008
+    },
+    {
+      "path": "pandora/GUI/ui_files/data_input.ui",
+      "sha256": "db2b0acef51ed076429fe3591cd2f3b18c562645e369cf22a79eeec88544062b",
+      "size": 3576
+    },
+    {
+      "path": "pandora/GUI/ui_files/dataset_editor.ui",
+      "sha256": "9ef74caaac2840c787729b8ef931e0852f829f43626f6c02df23fe75358f4271",
+      "size": 4643
+    },
+    {
+      "path": "pandora/GUI/ui_files/debug_output.ui",
+      "sha256": "5bff1d5f6a27e76464d288d5d83ccd38017d380bf75f9b809df6b956d2fd85cb",
+      "size": 1059
+    },
+    {
+      "path": "pandora/GUI/ui_files/delete.ui",
+      "sha256": "39e4b5fa2839971997864920cfe8c45aacb440a027757c72be6e05cc478bdb01",
+      "size": 392
+    },
+    {
+      "path": "pandora/GUI/ui_files/experiment_analyzer.ui",
+      "sha256": "0e4f8ffca0c36167a8e353bf50c6486b076424678acb445c8a9d3e161865b92c",
+      "size": 13791
+    },
+    {
+      "path": "pandora/GUI/ui_files/experiment_overview.ui",
+      "sha256": "b9014b1dc26634a5fca41f9d3f9e456ad67c81d8bf205e3abe4e3e81e93f270c",
+      "size": 3596
+    },
+    {
+      "path": "pandora/GUI/ui_files/image_analyzer.ui",
+      "sha256": "1715fef7ffdff539558a09b8cf3f7fdb58e3b0ab79e9d5ec67ba20d633d09cf6",
+      "size": 27409
+    },
+    {
+      "path": "pandora/GUI/ui_files/image_slicer.ui",
+      "sha256": "faf7a50a679ec3ea631e94f073470fa673f687ed81a834beaba15049b93ff6c0",
+      "size": 1389
+    },
+    {
+      "path": "pandora/GUI/ui_files/jetson_pin_out.ui",
+      "sha256": "8fe64071b1440f4f74537e7182d82c35ca1a2a07747afdf0df608bf54dd00029",
+      "size": 35849
+    },
+    {
+      "path": "pandora/GUI/ui_files/live_machine_parameter.ui",
+      "sha256": "d60135a2b9ac537350d4469f8b4c6f3053270aa9192c67a142d01d5800a01d92",
+      "size": 6560
+    },
+    {
+      "path": "pandora/GUI/ui_files/machine_com.ui",
+      "sha256": "d278b62dadffd6836f13502d1a1bb1ab14f024c561cc07bd242f03424c8a57d9",
+      "size": 17555
+    },
+    {
+      "path": "pandora/GUI/ui_files/machine_ctrl.ui",
+      "sha256": "8cb3e5149d945da057bf1db517e8a28a368425afb0f6c037ee3490e33adbc2b2",
+      "size": 65672
+    },
+    {
+      "path": "pandora/GUI/ui_files/main_window.ui",
+      "sha256": "397e18029ef6183d9b6e9fc0898b3f9442a47c8804f4ee311e68b727a19fe8a6",
+      "size": 19127
+    },
+    {
+      "path": "pandora/GUI/ui_files/marking_detection.ui",
+      "sha256": "4f3174c2bf5601ae0b6e389c0e61aa070b00a6e625e1a31f5e645d0504c519ec",
+      "size": 26612
+    },
+    {
+      "path": "pandora/GUI/ui_files/neural_networks.ui",
+      "sha256": "2090f7d77337b577cad4c41c687e41314df6d54d3677ba773ec9135ad696a13c",
+      "size": 117250
+    },
+    {
+      "path": "pandora/GUI/ui_files/pad_condition_analysis.ui",
+      "sha256": "a479cc002ab860b3ceebd952681ebb29554b34e0235d4eb91f69e3f1107229f9",
+      "size": 2659
+    },
+    {
+      "path": "pandora/GUI/ui_files/path_correction.ui",
+      "sha256": "5edefc893374a5048be8a251f54b95c517e837dd1d634e1caef6c2eef042e623",
+      "size": 55890
+    },
+    {
+      "path": "pandora/GUI/ui_files/path_view.ui",
+      "sha256": "f1630ff05b8d8c89e25d0b9f9d83ea07d485c64f99c363b7f94fd1483622a2d9",
+      "size": 3007
+    },
+    {
+      "path": "pandora/GUI/ui_files/plot_data_mpl.ui",
+      "sha256": "e7e9d914684473d382778857e37ac117c63ec8939c1580ad9c8eded481498f95",
+      "size": 24795
+    },
+    {
+      "path": "pandora/GUI/ui_files/plot_data_plotly.ui",
+      "sha256": "20fc16ca10cb769fb30907b6064d36f602c87e0e7783dd692ad82992dcd7a95e",
+      "size": 24790
+    },
+    {
+      "path": "pandora/GUI/ui_files/plot_isotropic_2d_psd.ui",
+      "sha256": "fec695d6e53a93c3d860e4e0fe7381153aa08c25bf675f8b193c7639b22c592a",
+      "size": 15057
+    },
+    {
+      "path": "pandora/GUI/ui_files/plot_rmsd.ui",
+      "sha256": "1532cb37bf4c093d4382eb22a9972d7421bc29cd0dee0d49b68f1eaacf6fa4fe",
+      "size": 4311
+    },
+    {
+      "path": "pandora/GUI/ui_files/plot_surface.ui",
+      "sha256": "b2829d757b3695adece762bfcb682e0339c65337a7dda358df9c6401c637109b",
+      "size": 83653
+    },
+    {
+      "path": "pandora/GUI/ui_files/plotly_3d_plot.ui",
+      "sha256": "8c88990428a02e01478d67db8994ae159654457d581c007c5dc599015f4f0be7",
+      "size": 1021
+    },
+    {
+      "path": "pandora/GUI/ui_files/process_polishing_images.ui",
+      "sha256": "f4be58cbf7d22b3e7028efeaa42a47693c3c60a96298d16f8f7eae77c0ba834e",
+      "size": 106022
+    },
+    {
+      "path": "pandora/GUI/ui_files/quaternion_calculator.ui",
+      "sha256": "9f242d394afb9ab070271b291391a1309947ba23c6d1d773541aebbc6f15f8ae",
+      "size": 10575
+    },
+    {
+      "path": "pandora/GUI/ui_files/robot_printing.ui",
+      "sha256": "8d794c579ec17e240fc5128f5fbc1e933cd9ad7faa0659802a20486fb423d36a",
+      "size": 40677
+    },
+    {
+      "path": "pandora/GUI/ui_files/settings.ui",
+      "sha256": "e142e1aa448913ac69e16c2abb1b8ef8979f61970d259f6be92cb4e2f12ac92f",
+      "size": 28672
+    },
+    {
+      "path": "pandora/GUI/ui_files/tool_ctrl.ui",
+      "sha256": "17afda4554ab3490afeca3f59cf9756cf22b61df0ef8c267dd0b690abd12a9bb",
+      "size": 20509
+    },
+    {
+      "path": "pandora/GUI/ui_settings.py",
+      "sha256": "799b975450db27c83c9a62833f5199b34c1b7067ddad28d0f22b7836f77f818e",
+      "size": 8667
+    },
+    {
+      "path": "pandora/GUI/windows/APMDesignerUI.py",
+      "sha256": "12e9ecbd640ebb56034ff200ad584e5a486ae5f9a4f536f8fce28699cb70a700",
+      "size": 9111
+    },
+    {
+      "path": "pandora/GUI/windows/MAPSAnalysisUI.py",
+      "sha256": "2b35ed58414dba5cfb79b5ef5c3516e0eadc9122409d80d55f21efacb4127efb",
+      "size": 18935
+    },
+    {
+      "path": "pandora/GUI/windows/MAPSSettingsUI.py",
+      "sha256": "496cb868edaf038dd7b107d1cfac8aeb4c0a337d91c90b12c8c7ede8d19271bd",
+      "size": 22172
+    },
+    {
+      "path": "pandora/GUI/windows/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/GUI/windows/coordinateSystemsUI.py",
+      "sha256": "fb6ed9416b162b8a2802e266199c6a113d4950e05ac282585f208ee69c1a5c97",
+      "size": 283
+    },
+    {
+      "path": "pandora/GUI/windows/dataAnalysisUI.py",
+      "sha256": "5d4bb1f5011bb5ddb5bc3e0e0d539733d11495cab48b4e717c2d6d957dfe5242",
+      "size": 32768
+    },
+    {
+      "path": "pandora/GUI/windows/dataInputUI.py",
+      "sha256": "19f5fbae739ef1e26cc372ee119cf8dacc08c9c376bf0048828aea8f6af7259a",
+      "size": 3301
+    },
+    {
+      "path": "pandora/GUI/windows/datasetEditorUI.py",
+      "sha256": "ce956b43501c39604b819030f1760760900135ed8327310a1e1b5c69de8d3512",
+      "size": 4559
+    },
+    {
+      "path": "pandora/GUI/windows/debugOutputUI.py",
+      "sha256": "9e1819c241c3316049728961d8ee0762969fdb4f08937b9c799b800e730e06eb",
+      "size": 263
+    },
+    {
+      "path": "pandora/GUI/windows/doeUI.py",
+      "sha256": "ba368a8de24c534f94731738e95ca3ddad7adeb4845506f8c36fe90e5d61b1c9",
+      "size": 1857
+    },
+    {
+      "path": "pandora/GUI/windows/experimentAnalyzerUI.py",
+      "sha256": "cb3b01bcbeb01a9016853b96df19bf47c7c78ab1376c4b1d42b313119ff53e7c",
+      "size": 29537
+    },
+    {
+      "path": "pandora/GUI/windows/experimentOverviewUI.py",
+      "sha256": "9357036aaf3d315a27f4a54b5515a1933e6c292c9e008a73d3c5b351d534470c",
+      "size": 284
+    },
+    {
+      "path": "pandora/GUI/windows/formFitWindowUI.py",
+      "sha256": "f30d2310c71cb6de13c67ad52743915e50982c12617f55c36accb551d571d8cb",
+      "size": 37442
+    },
+    {
+      "path": "pandora/GUI/windows/imageAnalyzerUI.py",
+      "sha256": "c3ea1f6e439ea4f077e091be3f4099c799aa20f03ad93dd96d9b968d31abf916",
+      "size": 25647
+    },
+    {
+      "path": "pandora/GUI/windows/imageSlicerUI.py",
+      "sha256": "f038df6cacd384ebe0eb41f08a999ca5adcefeea66b1215ec33e514a65c9821d",
+      "size": 5568
+    },
+    {
+      "path": "pandora/GUI/windows/interferometryUI.py",
+      "sha256": "b33a8013395ef707c2a42ddc581c346e08efd3493f5b49ee5645c1de4719921b",
+      "size": 195072
+    },
+    {
+      "path": "pandora/GUI/windows/jetsonPinOutUI.py",
+      "sha256": "f51ebe8953ed53deb10fe494c8850447a3714a513dc7b2c335e4ff62d3d5f892",
+      "size": 267
+    },
+    {
+      "path": "pandora/GUI/windows/machineComUI.py",
+      "sha256": "bf5a3d7b9540b27dcc0a70576e068122092ff12c25e3a7c3c21ac4bb6d6ee5c1",
+      "size": 8268
+    },
+    {
+      "path": "pandora/GUI/windows/machineControlUI.py",
+      "sha256": "4297bcbf1946fb993bfcf81ece209168687f33e6198d43817e56cb86668d9976",
+      "size": 35087
+    },
+    {
+      "path": "pandora/GUI/windows/machineParameterLiveUI.py",
+      "sha256": "6135112cabdd2ea5aa77a05042c1acdf98e60b9a6511e8c48158266ad941fe3c",
+      "size": 293
+    },
+    {
+      "path": "pandora/GUI/windows/manipulationWindow.py",
+      "sha256": "ed78515195dba81c2b664f778935d723b9a37ff1d2d428c77bb35b2511260fec",
+      "size": 2314
+    },
+    {
+      "path": "pandora/GUI/windows/mapsSimulationUI.py",
+      "sha256": "ef5c26e40bd8cc1b44c66a38dc8ed1c085f88684c6bc762a42748af77006d21e",
+      "size": 25224
+    },
+    {
+      "path": "pandora/GUI/windows/mapsUI.py",
+      "sha256": "f2e28b947e058a70e95268ac9fcf810fd55dc21503635bfe68f7e7aa91273a73",
+      "size": 25452
+    },
+    {
+      "path": "pandora/GUI/windows/markingDetectionWindowUI.py",
+      "sha256": "01b53c9773848c35c02df00128843a5d9596ab6c445105743e162dff6e6aa8da",
+      "size": 57338
+    },
+    {
+      "path": "pandora/GUI/windows/neuralNetworksUI.py",
+      "sha256": "c326310ade095a35e70c842ebd019f087cecd138e5911640654335878507471f",
+      "size": 4890
+    },
+    {
+      "path": "pandora/GUI/windows/outlierPreviewWindowUI.py",
+      "sha256": "d0c7e94c9f484f286525eadf1032f63f309f9421f2e94448145fb8a551fccf51",
+      "size": 22937
+    },
+    {
+      "path": "pandora/GUI/windows/padConditionAnalysisUI.py",
+      "sha256": "a32c74da5e59e80cdf7d535d6ddcfbed758af40b924b67a290de7ddd951f4354",
+      "size": 2721
+    },
+    {
+      "path": "pandora/GUI/windows/pathCorrectionUI.py",
+      "sha256": "4622bee4c1a47e4699d857f0886beac69408135af0d298a5966184525175f973",
+      "size": 272
+    },
+    {
+      "path": "pandora/GUI/windows/pathViewUI.py",
+      "sha256": "ed982c8add15072a5d0ba66998258e5427485535ec62deb306d7e250e78bd7da",
+      "size": 666
+    },
+    {
+      "path": "pandora/GUI/windows/plot3DSurfaceUI.py",
+      "sha256": "34708efca2097ecf42964b5733d4428e7bc508078c4aeef87b39dec13b49737b",
+      "size": 25264
+    },
+    {
+      "path": "pandora/GUI/windows/plotDataUI.py",
+      "sha256": "e8060e95bf76a42ee5e835457f23ed29c953e7d9af1531cdfe2bc12b69c4a51f",
+      "size": 32590
+    },
+    {
+      "path": "pandora/GUI/windows/plotIsotropic2dPsdUI.py",
+      "sha256": "f989471ab819c95aa4d2b1260210f97bebb7091672865c1fa122572f7d7dcdcd",
+      "size": 20770
+    },
+    {
+      "path": "pandora/GUI/windows/plotly3DSurfaceWindowUI.py",
+      "sha256": "1d8481f1bb76f559371e93171cc1143b527c21e4df27c41bdbaa0902c86848df",
+      "size": 11895
+    },
+    {
+      "path": "pandora/GUI/windows/polishingImagesUI.py",
+      "sha256": "ec81f7c8c2053d51058d134b0500cdea4112212fbb22c97841a862866343edda",
+      "size": 21561
+    },
+    {
+      "path": "pandora/GUI/windows/processPolishingImagesUI.py",
+      "sha256": "63455dba6164ec1d1cd0b7ef18ee2126ebb46d9ab7dbb83c62f0cb9d5d183758",
+      "size": 81209
+    },
+    {
+      "path": "pandora/GUI/windows/quaternionCalculatorUI.py",
+      "sha256": "a5f38bb6470e23b3ddfb3c00a273c4df2bb6fa6cf1ae2a2cac3dae25d79126a6",
+      "size": 800
+    },
+    {
+      "path": "pandora/GUI/windows/robotPrintingUI.py",
+      "sha256": "36ac001dbe41c90bf46974a7bcdeab47fcf86b19400dfe5b331154f890260b15",
+      "size": 783
+    },
+    {
+      "path": "pandora/GUI/windows/settingsUI.py",
+      "sha256": "eee87d4bb825bc915d29cc8c021587995c0f8641e8c5d9d6da98f6f5df657279",
+      "size": 5145
+    },
+    {
+      "path": "pandora/GUI/windows/templateUI.py",
+      "sha256": "d2d0b5350630b1d654e7281ec8e2b0b81721a5b081f2b5fa02e946915034b41c",
+      "size": 4247
+    },
+    {
+      "path": "pandora/GUI/windows/toolControlUI.py",
+      "sha256": "93cf953dcce3274dc625b5bfe170bf0c9e9a0d0015016514413d2da2720e367e",
+      "size": 9577
+    },
+    {
+      "path": "pandora/GUI/windows/transformDataWindow.py",
+      "sha256": "9acc4c4966a5153c6a2225a67b0fe9ef5b4f6c41d814cef7885f1a75d7bbbc7c",
+      "size": 4298
+    },
+    {
+      "path": "pandora/GUI/windows/zoomSurfaceWindowUI.py",
+      "sha256": "0cb55f49990203a6b53e9da2509727b813b49a82123bb83de2614d68a1a42fae",
+      "size": 22967
+    },
+    {
       "path": "pandora/IPC.py",
       "sha256": "6f4a2599c06ea9c51d7b8f09dba2acea1d2212d0fde5d593a6df770000fc2dbf",
       "size": 4573
+    },
+    {
+      "path": "pandora/OTA_updater/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/OTA_updater/build-and-release.yml",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/OTA_updater/bundled_app/main.py",
+      "sha256": "e72fe84aa608729d88384cf260ebb786c1ce4495dd8cb90a161eaa55fccd411c",
+      "size": 1686
+    },
+    {
+      "path": "pandora/OTA_updater/exe_bootsrap_launcher.py",
+      "sha256": "291ab1b812aed7ca710087b1c4c58d6440bd27e456438c4539ee59981cc717d8",
+      "size": 12782
+    },
+    {
+      "path": "pandora/OTA_updater/exe_distribution_system.py",
+      "sha256": "f4b5470a7f409ea2fff312d4aeafc3586d58b52660aa4c06d3331dbadebac516",
+      "size": 15638
+    },
+    {
+      "path": "pandora/OTA_updater/generate_signing_keys.py",
+      "sha256": "046f7b65af03e68bffc7abe4d3b716f4334488587504260ff6303238178b2302",
+      "size": 2425
+    },
+    {
+      "path": "pandora/OTA_updater/github_deploy.py",
+      "sha256": "2caf080eb3585ff8efd5efdc0abc23d6ac9d67160f1857eded24dadee3d9ba9b",
+      "size": 13182
+    },
+    {
+      "path": "pandora/OTA_updater/github_updater.py",
+      "sha256": "aff37d57368eddd6b03813b88ee2aaed2080af7c07cf80db02b4776998f2f6c8",
+      "size": 14818
+    },
+    {
+      "path": "pandora/OTA_updater/main.py",
+      "sha256": "440bdf9d1371c7e8daff397140a5093a7afc32fcb1e87cfdd3f72d2443e7dbbe",
+      "size": 1740
+    },
+    {
+      "path": "pandora/OTA_updater/pandora_update_private.pem",
+      "sha256": "034be19f5bf17364c866fdd4180fd97652c7e396501559fd7722e4143bd6f8a6",
+      "size": 122
+    },
+    {
+      "path": "pandora/OTA_updater/pandora_update_public.b64",
+      "sha256": "9ded65c4324ef6e965e7fd3bb65ea93e7c0033132b5a332ea1b957276a7d86e9",
+      "size": 44
+    },
+    {
+      "path": "pandora/OTA_updater/private_to_public_deploy.py",
+      "sha256": "fcde09520770cf19386d6811aad0d8d5f52eb1c1bd9887d2977eb8176b590738",
+      "size": 13871
+    },
+    {
+      "path": "pandora/OTA_updater/test_bootstrap.py",
+      "sha256": "8547bd850b757cab3343697f85108336fe38a6a87811e5ce8004f015a14eb83a",
+      "size": 5140
+    },
+    {
+      "path": "pandora/OTA_updater/test_complete_system.py",
+      "sha256": "82e239527cc34451aa7462fd228761ee258d225d41a34f6614fb7e24a7a84593",
+      "size": 14239
+    },
+    {
+      "path": "pandora/OTA_updater/toga_update_widget.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/OTA_updater/update_system_test/test_repo/README.md",
+      "sha256": "ffb0caaf0ea23b7c6955b5b8775a9288d2deef98c427d330eb1d31f3562e77c6",
+      "size": 314
+    },
+    {
+      "path": "pandora/OTA_updater/update_system_test/test_repo/main.py",
+      "sha256": "e72fe84aa608729d88384cf260ebb786c1ce4495dd8cb90a161eaa55fccd411c",
+      "size": 1686
+    },
+    {
+      "path": "pandora/OTA_updater/update_system_test/test_repo/manifest_1.0.0.json",
+      "sha256": "e56dee6b12180d62361205a5227da952638fbb0d1ee1fe06b01f53166bb1a3a8",
+      "size": 336
+    },
+    {
+      "path": "pandora/OTA_updater/update_system_test/versions/1.0.0/main.py",
+      "sha256": "e72fe84aa608729d88384cf260ebb786c1ce4495dd8cb90a161eaa55fccd411c",
+      "size": 1686
+    },
+    {
+      "path": "pandora/OTA_updater/update_system_test/versions/1.1.0/main.py",
+      "sha256": "04f7dc5d6affda27617c844c2d1d88cde14692a43958bbf46ee82d65bbcdf432",
+      "size": 2149
+    },
+    {
+      "path": "pandora/OTA_updater/update_system_test/versions/1.1.0/utils.py",
+      "sha256": "52e0100f026d431cefe33728e6d98e0206d208750c9a3571f41d3130608e0b30",
+      "size": 125
+    },
+    {
+      "path": "pandora/OTA_updater/update_system_test/versions/1.2.0/config.py",
+      "sha256": "ac01151aa2b4c1f19f48429f2ff4a1f30496606b39ce48dbd6ce14c854521ad9",
+      "size": 162
+    },
+    {
+      "path": "pandora/OTA_updater/update_system_test/versions/1.2.0/main.py",
+      "sha256": "0bc16e3674d7a07cfbb16ea434dd51494fe5b174594f82c18324e24f57c08b3b",
+      "size": 2798
+    },
+    {
+      "path": "pandora/OTA_updater/update_system_test/versions/1.2.0/utils.py",
+      "sha256": "f9db51fdc257871bcca22bee8ec358d89789a2af1f4250691efd768298c2eb06",
+      "size": 125
+    },
+    {
+      "path": "pandora/OTA_updater/version_manager.py",
+      "sha256": "05141409dd263190c041d2aa9c7e16986953cb11ede757334e7e43d6a8460dc2",
+      "size": 7504
     },
     {
       "path": "pandora/__init__.py",
@@ -37,9 +822,2624 @@
       "size": 22906
     },
     {
+      "path": "pandora/communication/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/communication/machineControl.py",
+      "sha256": "7d7f8341eec8c581030c62283df1a4f7c41ba32a931341ca6a792953ca6c13a9",
+      "size": 34701
+    },
+    {
+      "path": "pandora/communication/machineSocketConnection.py",
+      "sha256": "14add32dbbda9e7c7ae63ec86f57ecb17182b935f745f4168d1e374798d424e5",
+      "size": 23768
+    },
+    {
+      "path": "pandora/communication/serial_com.py",
+      "sha256": "28e026cb5e7f745182bd86600b84ab3d32956e881d46496a5a86b1618edba50d",
+      "size": 2908
+    },
+    {
+      "path": "pandora/data_analysis/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/data_analysis/dataAnalysis.py",
+      "sha256": "cfce14ca6bec63240681f6fdbbe042e775312261f8fa616aaef3a9821ba20637",
+      "size": 12525
+    },
+    {
+      "path": "pandora/data_analysis/experimentAnalyzer.py",
+      "sha256": "a89ebaa453b9dd98526f51fe4eff8e87aa92955663e8e7cdab17c67587760e1a",
+      "size": 14457
+    },
+    {
+      "path": "pandora/data_analysis/pathAnalyze.py",
+      "sha256": "294ee77e77ada23aba9084f27d69adf95f9d93f6bb3828d962215bbd504692fa",
+      "size": 10987
+    },
+    {
       "path": "pandora/datatypes.py",
       "sha256": "5218f1d0ef2dc7f7bd5177855d5556a05d4213ae43e68a6bcae433fda473132b",
       "size": 30963
+    },
+    {
+      "path": "pandora/files_directories/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/files_directories/fileDialog.py",
+      "sha256": "220bc13fea573915b38fb111297e054e25eb1d03a8c71adfcc4249d03806ae01",
+      "size": 4693
+    },
+    {
+      "path": "pandora/files_directories/fileImports.py",
+      "sha256": "3e50e9f9ad831d342e0af55ba900f398788cc41bf710b4229efbdb2b5d6dba80",
+      "size": 4279
+    },
+    {
+      "path": "pandora/files_directories/filehandling.py",
+      "sha256": "ee2f731d04887b53c3eaed3b4ad0b16544a4609c3bb4c7226581dbab71620fc7",
+      "size": 41245
+    },
+    {
+      "path": "pandora/files_directories/organizeDirectories.py",
+      "sha256": "d4cc4ab2913285b4d4345738486295224370999c98c85b3ba287bec4d7859e3d",
+      "size": 1557
+    },
+    {
+      "path": "pandora/files_directories/saveFile.py",
+      "sha256": "699fe5c2b8b6dedb726ba652d019568d394f8096c77b8484d1077b0b68f2ac2b",
+      "size": 29766
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperiodic_monotile.ipynb",
+      "sha256": "cf80c208bf71491c2ab2399ef6c873e44c6213cd5d3aedd09788b78a063b833f",
+      "size": 31037
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm.png",
+      "sha256": "86a18f1fd76bcbd03d4bf5daed01b9b77a3bf85217ca75af0f8f54cc5c575ad4",
+      "size": 7004280
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm.svg",
+      "sha256": "e7fc6fac10dd2f1f08a13a536ae1cb0aebe39996f825b4709d9c3e94f3287566",
+      "size": 6134890
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designer.ipynb",
+      "sha256": "dfd41aa3d2e965db0e04d91a60ca91cc2b3473df3ac258329c3caea80854f8fe",
+      "size": 4385817
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coding_template_tmp_delete_me.npy",
+      "sha256": "852e119d91086703e9a42cd3ad52a97376bc51c885f0c395857279cabc4c6d1d",
+      "size": 5888
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coding_template_tmp_delete_me_1.npy",
+      "sha256": "1b4d81a76ba510f881e78a30aa7053e260d9aabb66d17e45aece1840313b9fe8",
+      "size": 5888
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coding_template_tmp_delete_me_2.npy",
+      "sha256": "62f60fd493a985f782ed2c8524f593bddab2897801a859d3cadf9d0a79e8742c",
+      "size": 5888
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coding_template_tmp_delete_me_3.npy",
+      "sha256": "ae51a5b0476b1b9c01b2a8ab81311375b02495920a7f0d5a321513f58e57e436",
+      "size": 5888
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coding_template_tmp_delete_me_4.npy",
+      "sha256": "949dbba1550efb0cae3c65daf8bd9767692409be9e1ef7e403abf6f3a680f716",
+      "size": 5888
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coding_template_tmp_delete_me_5.npy",
+      "sha256": "96da0b2036632ca00ac7787c1be57ca0db1c9b7fbc1254c5b8b04b70e8b2e598",
+      "size": 5888
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coordinates_tmp_delete_me.csv",
+      "sha256": "c5b8a1fddc71458947dcba547a0a6454328b969193c38c80714bb327f7e15800",
+      "size": 7163
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coordinates_tmp_delete_me_1.csv",
+      "sha256": "e14f8a7921d8155010fa50ed1da61b8759dad94a5830d4ac2e33975610c66eb9",
+      "size": 7408
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coordinates_tmp_delete_me_2.csv",
+      "sha256": "2a63de602bf93df856bd85f454a9697d0051cfa1cd6e1a30335907172c36e224",
+      "size": 7311
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coordinates_tmp_delete_me_3.csv",
+      "sha256": "35c6c8501248effc5a6cf7e48ec553d56ffe400c7fdfb28ecebc731b0cbf9014",
+      "size": 7168
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coordinates_tmp_delete_me_4.csv",
+      "sha256": "72868f743d2deb801e174c387cce313202e613f3ebb718b4c2e36091c665f26b",
+      "size": 7571
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/marker_coordinates_tmp_delete_me_5.csv",
+      "sha256": "b364c33f07f657382197d9de0bf5959aeef393f1eaf709feec2802d16a0ceb17",
+      "size": 7538
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/spot_coordinates_tmp_delete_me.csv",
+      "sha256": "124f54a4978a3677107e8e5e8f9c766095daef5e44c8c69650ac684fb0e31c47",
+      "size": 803553
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/spot_coordinates_tmp_delete_me_1.csv",
+      "sha256": "124f54a4978a3677107e8e5e8f9c766095daef5e44c8c69650ac684fb0e31c47",
+      "size": 803553
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/spot_coordinates_tmp_delete_me_2.csv",
+      "sha256": "124f54a4978a3677107e8e5e8f9c766095daef5e44c8c69650ac684fb0e31c47",
+      "size": 803553
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/spot_coordinates_tmp_delete_me_3.csv",
+      "sha256": "124f54a4978a3677107e8e5e8f9c766095daef5e44c8c69650ac684fb0e31c47",
+      "size": 803553
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/spot_coordinates_tmp_delete_me_4.csv",
+      "sha256": "124f54a4978a3677107e8e5e8f9c766095daef5e44c8c69650ac684fb0e31c47",
+      "size": 803553
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_designs/spot_coordinates_tmp_delete_me_5.csv",
+      "sha256": "124f54a4978a3677107e8e5e8f9c766095daef5e44c8c69650ac684fb0e31c47",
+      "size": 803553
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_example_4x9.png",
+      "sha256": "2089e6c4e2ebc6af5b24205da5530750ef8cd87c76a0f9ae17f60eba97a9958e",
+      "size": 6819117
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_example_4x9_markerSize_x5.png",
+      "sha256": "ff56326bbf743a5871144826a7f4ccc680a67c6cdc9d7d6ef2a371ebe482a0a0",
+      "size": 6892950
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_example_8x8_markerSize_x6_less_marker.png",
+      "sha256": "801da9c5ad26609bf431caf4dfa36544ed00b657886a3a42d16bcf4f1676b253",
+      "size": 6967059
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_example_bigger_marker_area.png",
+      "sha256": "d42dd6f736268bdd33a6d90c991546b49b8df5d50bc47a9b5e353d084ec4dbf2",
+      "size": 6620371
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_example_markerSize_x5.png",
+      "sha256": "2bbd744aa3d924cef9ac402aef269e334dce2ddb5093a9f53a9cd68aafb2d61d",
+      "size": 6779650
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_example_markers_too_big.png",
+      "sha256": "ec1764cac3b824b9836fe9837e15643fa5143f498a07dd8be9491af11ea68d09",
+      "size": 6839708
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/apm_example_normal.png",
+      "sha256": "883ce3941101ff766fe4e4a0f3e5e000ac59859de37621a7e29b451db8767c6a",
+      "size": 7091174
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/starlight.ipynb",
+      "sha256": "5ef4aec64ba9dbbae6606c7ae4cee70968291f3df59a2fe29414cf36bf0a215e",
+      "size": 50585
+    },
+    {
+      "path": "pandora/jupyter_notebooks/aperture_mask_designer/understanding_original_apm_design.ipynb",
+      "sha256": "0732d7b021a06ccdd1baf0588779b6d6b1164473baa006d1a9bf40b71f30213c",
+      "size": 103368
+    },
+    {
+      "path": "pandora/jupyter_notebooks/apm_pattern_matching.ipynb",
+      "sha256": "ecf2b617bc266c6a94f2d4bd05484fa232b0c096711afce2b710bcf8a33d8b96",
+      "size": 7615720
+    },
+    {
+      "path": "pandora/jupyter_notebooks/apm_pattern_matching_new_mask.ipynb",
+      "sha256": "63d18ea1e6364c422463196f9e664353edb7bfc5b707aa35d4f9819e6d5c3164",
+      "size": 5977219
+    },
+    {
+      "path": "pandora/jupyter_notebooks/ota_updater_sketch.ipynb",
+      "sha256": "a591d8b10154b4b903c7ec055b022940aa1d9afee5ae2273c72b6507f0fe3eeb",
+      "size": 4603
+    },
+    {
+      "path": "pandora/jupyter_notebooks/pointcloud.ipynb",
+      "sha256": "2233fbe1c1af91400ce34cf6ba54d83e4605f13770527e98838405b56ed7edb6",
+      "size": 20446
+    },
+    {
+      "path": "pandora/jupyter_notebooks/sketch.ipynb",
+      "sha256": "9e62e8e4d2c3b5d3b2fb15cb8fb7f8ae37eaaeccc1152c54e5ff6203e80f000f",
+      "size": 2972
+    },
+    {
+      "path": "pandora/machine_robot/PID.py",
+      "sha256": "3617b39d972313692539b0b12f443661b2e8321264db6c41da1de89317e15c25",
+      "size": 4705
+    },
+    {
+      "path": "pandora/machine_robot/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/machine_robot/artificial_path.py",
+      "sha256": "b0c40bfe78d8c0f07351c2012a667288903e5ba21a3232cde69ed3bf667e73ed",
+      "size": 3114
+    },
+    {
+      "path": "pandora/machine_robot/millingPath.py",
+      "sha256": "0ebced86852db82ac3ff1d4bf1a0687a1d0e0ad92063f00059c8566ede2e8ae8",
+      "size": 6310
+    },
+    {
+      "path": "pandora/machine_robot/pathCorrection.py",
+      "sha256": "1f47f2e598839589e1d5e2c8ff22a74e1557f625a6320666635c8b2dc59787e7",
+      "size": 27328
+    },
+    {
+      "path": "pandora/machine_robot/pathCreation.py",
+      "sha256": "1b7f519f9d15d306fdf8c11eb31c0e4ae2bcd262159ed39bde0b5fb80b7c4825",
+      "size": 27169
+    },
+    {
+      "path": "pandora/machine_robot/pathPlanning.py",
+      "sha256": "fccba1a51e8026de0951603499862c9678ac7d0e2f4dc9fe47c898f4da23358c",
+      "size": 8305
+    },
+    {
+      "path": "pandora/machine_robot/quaternionCalc.py",
+      "sha256": "d33d7346d5a31159efa5390a59a08c511adada472c3c72c8829785034ae6335a",
+      "size": 4051
+    },
+    {
+      "path": "pandora/machine_robot/savezone.py",
+      "sha256": "65def6e0f07b898fa02d139fa239a4bbd765249b4881414b954447a5d01921bf",
+      "size": 5173
+    },
+    {
+      "path": "pandora/machine_robot/simulateController.py",
+      "sha256": "95a30264f1eb3fee20af3fc6a50a20723fd204d6a48e7cbabbc6f72ab816e837",
+      "size": 12495
+    },
+    {
+      "path": "pandora/maps/APMDesigner.py",
+      "sha256": "23c21870b7b6cc8b5337e5ebbe393b3f283c291b1fd6ed9b58915567c29644d5",
+      "size": 10762
+    },
+    {
+      "path": "pandora/maps/APMLegacy.py",
+      "sha256": "b30f9acc9d6c64fcd17130dc8a253e9b3921e6a84119c7651ddd98775abd4c15",
+      "size": 15431
+    },
+    {
+      "path": "pandora/maps/APMLegacyAlgorithms.py",
+      "sha256": "34c3fbd498e70468a4c0380ee982fbaf505624df5057f06ca20342ea57273cff",
+      "size": 14808
+    },
+    {
+      "path": "pandora/maps/APMMarkerPattern.py",
+      "sha256": "40684b1058cc5520ee98732b99f5c98ca4af427fb2a5b474096a03d27b776824",
+      "size": 41064
+    },
+    {
+      "path": "pandora/maps/APMRandomPattern.py",
+      "sha256": "1c37062531ddd7c7311d80b5180b2fe9af1e7818b4ec143aacc14abdd477248d",
+      "size": 11284
+    },
+    {
+      "path": "pandora/maps/APMRandomPatternAlgorithms.py",
+      "sha256": "956979fbc983d8c9490b43530c50790308f1256c35a27e07a43f0a41b3f3e82d",
+      "size": 36313
+    },
+    {
+      "path": "pandora/maps/Aberations_ppp.py",
+      "sha256": "bcd14d31f0d6bda05e2eb9343abf323ec1c111099bb8a7c7b333e68c06b01d6e",
+      "size": 1810
+    },
+    {
+      "path": "pandora/maps/AxisCalibration.py",
+      "sha256": "37b4a9807471432c30e1b35b243a6d9016cca67de12002e6c5fdd79015714a18",
+      "size": 5091
+    },
+    {
+      "path": "pandora/maps/Calc.py",
+      "sha256": "e6a4a61c3cceda41e9669c733dd76864ef3f6a19482c6b23bc32bdf884c79683",
+      "size": 1473
+    },
+    {
+      "path": "pandora/maps/Camera_features.py",
+      "sha256": "938ad06041632209a56603fc2ea79a7315d3d98dcd78937ae01a14a363594b7b",
+      "size": 7111
+    },
+    {
+      "path": "pandora/maps/ImageAcquisition.py",
+      "sha256": "09545091953e3711f87fb445e78fae6e626916a5239ed0af7b3923af6942a106",
+      "size": 29065
+    },
+    {
+      "path": "pandora/maps/LED_control.py",
+      "sha256": "a4919f01f11ae676b70962273146b07c150acfc2b83130586d0cd7169f4280b2",
+      "size": 13453
+    },
+    {
+      "path": "pandora/maps/MAPS.py",
+      "sha256": "afe40e32d59c56b19c86141f581928b691d661fe57daf8fcfc390cc02551df2d",
+      "size": 38782
+    },
+    {
+      "path": "pandora/maps/MAPSAnalysis.py",
+      "sha256": "2b0fd9a84e24744692555c0f02ec1571b1bc54fdaefd2982a4ff4f449f13b5cd",
+      "size": 9303
+    },
+    {
+      "path": "pandora/maps/MAPSCalculation.py",
+      "sha256": "414652de8ef8dc68846ba77120a31de3f40108d502d15bde0a5ad34dc7f45005",
+      "size": 33113
+    },
+    {
+      "path": "pandora/maps/MAPSSimulation.py",
+      "sha256": "1c4803faa4157ad89d08ee8d4e4c2f5c3cd7b96f6af2691cb713a1cb37f0ce5c",
+      "size": 32027
+    },
+    {
+      "path": "pandora/maps/MAPS_image.py",
+      "sha256": "1dd59668e7751901bd0f21ee3031ba8e81189d5da2d2d70db3e42ec14bfb2796",
+      "size": 16684
+    },
+    {
+      "path": "pandora/maps/MAPS_pose.py",
+      "sha256": "373ec46363f74fb5de6ae02dea78ebc469eea8ebb114023383efbf568064bea0",
+      "size": 11902
+    },
+    {
+      "path": "pandora/maps/Simulation.py",
+      "sha256": "7189611cff57f51f6c975e77c9fa47d971da7d21a7ed70d445cfe29c7961532a",
+      "size": 31320
+    },
+    {
+      "path": "pandora/maps/Statistik.py",
+      "sha256": "7e7d98cb66ff9c99e92fea006c35eebf20259e82dc291f047776710d60e1d530",
+      "size": 3119
+    },
+    {
+      "path": "pandora/maps/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/maps/analyze.py",
+      "sha256": "a68cd1bf822c6b91c24777d4dfc521ce3f09ddc2b9b8e62ec182f5813a1823f9",
+      "size": 30738
+    },
+    {
+      "path": "pandora/maps/apertureMask.py",
+      "sha256": "648ef6ad7639075dc73824b6306d8ce22cd3a6823243ec6ce8c9dd963a6fb55f",
+      "size": 182
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/MP_0.319_3/MP_0.319_3.ini",
+      "sha256": "ac16ddda2b2b52b13ad5327c638ee5dde7cb072093d55a99c109f06442c60511",
+      "size": 713
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/MP_0.319_3/MP_0.319_3.png",
+      "sha256": "8db1d234f7ce8b80cfc72970cb421830ecf5de0cea8ac0d1daf9fdd4e61d24ae",
+      "size": 1075904
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/MP_0.319_3/MP_0.319_3.svg",
+      "sha256": "eff894577136152c0d225e2beb136bc8f5bda5ffffd0b61017a098d8d24b1bab",
+      "size": 165805
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/MP_0.319_3/MP_0.319_3_marker_coding_template.npy",
+      "sha256": "b77b3f34f33faf54cbac4f429d7a073327cc0799f40f2f14979b6a91fc6baafa",
+      "size": 192
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/MP_0.319_3/MP_0.319_3_marker_coordinates.apm",
+      "sha256": "a7b31940585cea18043fcf693e8a38f9563288ed06a4b323f616ed506452892a",
+      "size": 54
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/MP_0.319_3/MP_0.319_3_spot_coordinates.apm",
+      "sha256": "f5f48dec48a738603be095a83ec87bb37bb1182188c1aeb16e6fd3cdfe140b79",
+      "size": 20353
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RGB_GT6400/RP_300mu_0.5mm_500mm/mask_template.mt",
+      "sha256": "6d72bc098da7a9290f7fffe352e849b0388020efff540ffb32369f13dadc24c8",
+      "size": 15992545
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RGB_GT6400/RP_300mu_0.75mm_500mm/mask_template.mt",
+      "sha256": "fd0a94635f63ef6d01d688d4c190986ddc21586cc78e72bfc7bdcb3050e7ff07",
+      "size": 15992545
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RGB_GT6400/RP_300mu_1mm_500mm/mask_template.mt",
+      "sha256": "2e32e4efa7308576d20e1687af2e29e96ff99722290ab88d1aab93253159c964",
+      "size": 15992545
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_150mu_1mm_250mm/RP_150mu_1mm_250mm.ini",
+      "sha256": "e384be13e726209e75c843259302ff352c27bc50b9702037a7c3b3617263556f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_150mu_1mm_250mm/RP_150mu_1mm_250mm.png",
+      "sha256": "0e61e2b54a13e545887b5f871b3a8d54780c58265a78f8631931fcd1575af3a1",
+      "size": 2172537
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_150mu_1mm_250mm/RP_150mu_1mm_250mm.svg",
+      "sha256": "25bbed89b403aa6c0b0c8a7c8481bd58f0b7b6b6a49cb3f462bce2d3908f98bd",
+      "size": 662123
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_150mu_1mm_250mm/RP_150mu_1mm_250mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_150mu_1mm_250mm/mask_template.mt",
+      "sha256": "164f9546cdf10a94a94c77a8a844e0fc427234eb9d42406d944429e9edd2644b",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.5_illustration/RP_300_0.5_illustration.ini",
+      "sha256": "78331ec499b3ce38e5c36f43bf4898a485b1ac80f69253f25f11332ffc2b698d",
+      "size": 726
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.5_illustration/RP_300_0.5_illustration.png",
+      "sha256": "eb4b130d2fd346d2d3f1d6f0cfadacd374f5eea650a6414217a5a628bbe1bf7c",
+      "size": 6040311
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.5_illustration/RP_300_0.5_illustration.svg",
+      "sha256": "fa4294ab7038dd7a0dfa5e4b46cc1d9be5f464f1b6794628757975c550dff896",
+      "size": 2691019
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.5_illustration/RP_300_0.5_illustration_spot_coordinates.apm",
+      "sha256": "36272a66ca9684192d73eb4ebd2147a5a1df467cd83cf3518a1b37fdabc7c1ef",
+      "size": 363823
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.5_illustration/mask_template.mt",
+      "sha256": "5222751d2c02d611dd5ed6b40d9a8654b833af16f4a90ea19d4ad8950e9a47e2",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.75_illustration/RP_300_0.75_illustration.ini",
+      "sha256": "7d25cbc88a4d879208cfa4846e6a7e5333700f234b943ba3ddb6be7c76201cf8",
+      "size": 727
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.75_illustration/RP_300_0.75_illustration.png",
+      "sha256": "0ca67956057b9b81d44b46321c922dc476b7eabc323650e8c6ee6608aa783309",
+      "size": 3133384
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.75_illustration/RP_300_0.75_illustration.svg",
+      "sha256": "ecebeb8b2ab010ad0aa7a214a046519c1e37cbb30a88d83ccf526d212cb6691c",
+      "size": 1175196
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.75_illustration/RP_300_0.75_illustration_spot_coordinates.apm",
+      "sha256": "5c3e37ccf0d5931f66290414b80b2ef4020982c9f168a07a9c127cc3fe5372e7",
+      "size": 157832
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_0.75_illustration/mask_template.mt",
+      "sha256": "c36f8c505a24127bfccff49e4ea0dd492e4daef0f45ebb4ab1ab06240c61b58e",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_2.0_illustration/RP_300_2.0_illustration.ini",
+      "sha256": "0343dfb7b60513fbf453a6e2e2983ac53669694cfa3245b377b0a7cfab47baa8",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_2.0_illustration/RP_300_2.0_illustration.png",
+      "sha256": "d4ce304f588b294bd0455b6a80b82837f7d428159c21b3346ef5097d87b5b867",
+      "size": 1063728
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_2.0_illustration/RP_300_2.0_illustration.svg",
+      "sha256": "c778e583504c5f5c03bfbab634895a29da42662f0c2476b598e6ae991966b093",
+      "size": 189711
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_2.0_illustration/RP_300_2.0_illustration_spot_coordinates.apm",
+      "sha256": "2fa1cfb01cb6b9e696af7312b943a84e0368a2b956626e86d925e0943f407dde",
+      "size": 23893
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_2.0_illustration/mask_template.mt",
+      "sha256": "488c95073281fc22b5b099a1b505c076b1f2d38744082cb67318db0af1eb6935",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_3.0_illustration/RP_300_3.0_illustration.ini",
+      "sha256": "429dc8d3e11d7efd0f4c1ca0e25cff5a6bf3b38812b32e0125ace4377a5835c9",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_3.0_illustration/RP_300_3.0_illustration.png",
+      "sha256": "04700ec8815e00e2e8ca8f3ca776467f08925a8b921e88b3fa7cf3019cdeeaa8",
+      "size": 830285
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_3.0_illustration/RP_300_3.0_illustration.svg",
+      "sha256": "dd73acccba138abaa806580b695a9534d3353702fd4cf2f1333138681e70d09b",
+      "size": 90950
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_3.0_illustration/RP_300_3.0_illustration_spot_coordinates.apm",
+      "sha256": "914736c2b3666ed1ed36aeee51aa87118423d75cd6f3fc381a1ef9b76db05071",
+      "size": 10472
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300_3.0_illustration/mask_template.mt",
+      "sha256": "283bb8383f373d35f0cf6c2daab21f86450fbfd492fd08ca638bab9617d1cadb",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_1000mm/RP_300mu_0.5mm_1000mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_1000mm/RP_300mu_0.5mm_1000mm.png",
+      "sha256": "8f4781b8f12a60f37653817b321fb8d3b21ef847b94227c0c3cd90d9f9dbdb55",
+      "size": 6093986
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_1000mm/RP_300mu_0.5mm_1000mm.svg",
+      "sha256": "424ae96b447fe15dc644c63f13c6fe6bb8e7df4efe6af74a383a7411714c9909",
+      "size": 2558527
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_1000mm/RP_300mu_0.5mm_1000mm_spot_coordinates.apm",
+      "sha256": "3abbf500e8927db4eb9d8cc50f04dd32d24b652172515d617e2ef460ff078288",
+      "size": 345857
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_1000mm/mask_template.mt",
+      "sha256": "33d361742ed3fd46cf7c7f0f1aa2c67b5f2f046cba7ba4d25249c9c2deda3fc6",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_250mm/RP_300mu_0.5mm_250mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_250mm/RP_300mu_0.5mm_250mm.png",
+      "sha256": "8f4781b8f12a60f37653817b321fb8d3b21ef847b94227c0c3cd90d9f9dbdb55",
+      "size": 6093986
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_250mm/RP_300mu_0.5mm_250mm.svg",
+      "sha256": "23f5d7048aa55749358ae7cf474ad669b783e23048397c99c3af2ba98f6972ea",
+      "size": 2558527
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_250mm/RP_300mu_0.5mm_250mm_spot_coordinates.apm",
+      "sha256": "3abbf500e8927db4eb9d8cc50f04dd32d24b652172515d617e2ef460ff078288",
+      "size": 345857
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_250mm/mask_template.mt",
+      "sha256": "5b717482af213e797ed1bf69ca89866e0c5ba82fedec027e86dbb5509f43984c",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm/RP_300mu_0.5mm_500mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm/RP_300mu_0.5mm_500mm.png",
+      "sha256": "8f4781b8f12a60f37653817b321fb8d3b21ef847b94227c0c3cd90d9f9dbdb55",
+      "size": 6093986
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm/RP_300mu_0.5mm_500mm.svg",
+      "sha256": "14666d7591c4b61985312a7f61986bb79e63a27207dd6b6148b93fd1e6d8abed",
+      "size": 2558527
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm/RP_300mu_0.5mm_500mm_spot_coordinates.apm",
+      "sha256": "3abbf500e8927db4eb9d8cc50f04dd32d24b652172515d617e2ef460ff078288",
+      "size": 345857
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm/mask_template.mt",
+      "sha256": "b8ea93b93447cd3ee757c71c7ba5065d2c0371b84107ad258b0a18ad00285a5b",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm_RGB/RP_300mu_0.5mm.ini",
+      "sha256": "78331ec499b3ce38e5c36f43bf4898a485b1ac80f69253f25f11332ffc2b698d",
+      "size": 726
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm_RGB/RP_300mu_0.5mm.png",
+      "sha256": "66f5bbc156c0322cb86aacb6c1c5f99b15114d3c6b537496fb06c11edf458714",
+      "size": 5800892
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm_RGB/RP_300mu_0.5mm.svg",
+      "sha256": "4941f22a644ef4c47daa875c450a834a9ab5b0fe039a916835e89198b0cb5599",
+      "size": 2558517
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm_RGB/RP_300mu_0.5mm_500mm_RGB_spot_coordinates.apm",
+      "sha256": "3abbf500e8927db4eb9d8cc50f04dd32d24b652172515d617e2ef460ff078288",
+      "size": 345857
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_500mm_RGB/mask_template.mt",
+      "sha256": "6d72bc098da7a9290f7fffe352e849b0388020efff540ffb32369f13dadc24c8",
+      "size": 15992545
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_750mm/RP_300mu_0.5mm_750mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_750mm/RP_300mu_0.5mm_750mm.png",
+      "sha256": "8f4781b8f12a60f37653817b321fb8d3b21ef847b94227c0c3cd90d9f9dbdb55",
+      "size": 6093986
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_750mm/RP_300mu_0.5mm_750mm.svg",
+      "sha256": "7ede80fc51ba11b9e514e5e083b5e127ac658a663513027a9a3f1a3fa263ba30",
+      "size": 2558527
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_750mm/RP_300mu_0.5mm_750mm_spot_coordinates.apm",
+      "sha256": "3abbf500e8927db4eb9d8cc50f04dd32d24b652172515d617e2ef460ff078288",
+      "size": 345857
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.5mm_750mm/mask_template.mt",
+      "sha256": "9ad04eebc69db9ced2956d998c6f7884dfc572f56896e0466a7767aaac264e91",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_1000mm/RP_300mu_0.75mm_1000mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_1000mm/RP_300mu_0.75mm_1000mm.png",
+      "sha256": "94d6bbadaa013762c08f1d323c7e0bf992ed93c09540086d0e84b4b945c7a152",
+      "size": 3250195
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_1000mm/RP_300mu_0.75mm_1000mm.svg",
+      "sha256": "94574b78b05c75e620dd7df0117b1630184fece2af19dd2f5fedc4527a375993",
+      "size": 1160597
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_1000mm/RP_300mu_0.75mm_1000mm_spot_coordinates.apm",
+      "sha256": "1c01bbac31a072da682f16f17cd7197d05ff2ca767dcb558cd0f73a46093440a",
+      "size": 155808
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_1000mm/mask_template.mt",
+      "sha256": "2b684b612a23aac5c8ab7ce490e325a8b9ada9363bc67f3cec27c83b6e2534f1",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_250mm/RP_300mu_0.75mm_250mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_250mm/RP_300mu_0.75mm_250mm.png",
+      "sha256": "94d6bbadaa013762c08f1d323c7e0bf992ed93c09540086d0e84b4b945c7a152",
+      "size": 3250195
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_250mm/RP_300mu_0.75mm_250mm.svg",
+      "sha256": "8ada98c4df4fd817edafebeb920288f6f85e34325646b9905d85de006b72fe32",
+      "size": 1160597
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_250mm/RP_300mu_0.75mm_250mm_spot_coordinates.apm",
+      "sha256": "1c01bbac31a072da682f16f17cd7197d05ff2ca767dcb558cd0f73a46093440a",
+      "size": 155808
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_250mm/mask_template.mt",
+      "sha256": "a17c54c2df0a782d26f9c36718eb47d436cea8368257809fffddf3fdd690bcdc",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_500mm/RP_300mu_0.75mm_500mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_500mm/RP_300mu_0.75mm_500mm.png",
+      "sha256": "94d6bbadaa013762c08f1d323c7e0bf992ed93c09540086d0e84b4b945c7a152",
+      "size": 3250195
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_500mm/RP_300mu_0.75mm_500mm.svg",
+      "sha256": "7c4b6dbd00fffd71993170578204890f27fcfe8457e9ff300ed38b401c3225e1",
+      "size": 1160597
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_500mm/RP_300mu_0.75mm_500mm_spot_coordinates.apm",
+      "sha256": "1c01bbac31a072da682f16f17cd7197d05ff2ca767dcb558cd0f73a46093440a",
+      "size": 155808
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_500mm/mask_template.mt",
+      "sha256": "9b0893b3c3982d63d2207d69cde32e8da72061c9f20fea0d7955adcba04c2453",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_750mm/RP_300mu_0.75mm_750mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_750mm/RP_300mu_0.75mm_750mm.png",
+      "sha256": "94d6bbadaa013762c08f1d323c7e0bf992ed93c09540086d0e84b4b945c7a152",
+      "size": 3250195
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_750mm/RP_300mu_0.75mm_750mm.svg",
+      "sha256": "1c56921914fe2b53a5edcfa7d341cb6f2a2ccd09f81b8577d3a9ee8c14ee94f1",
+      "size": 1160597
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_750mm/RP_300mu_0.75mm_750mm_spot_coordinates.apm",
+      "sha256": "1c01bbac31a072da682f16f17cd7197d05ff2ca767dcb558cd0f73a46093440a",
+      "size": 155808
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_0.75mm_750mm/mask_template.mt",
+      "sha256": "a4004df54263aa899bee9c1cb3adddd26e81ea9d117bca34bcf6f74000b97823",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_1000mm/RP_300mu_1.5mm_1000mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_1000mm/RP_300mu_1.5mm_1000mm.png",
+      "sha256": "68621663d2bcbfa1aed8413220896061361c2bdc7090a5fbb2195d39413da624",
+      "size": 1361167
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_1000mm/RP_300mu_1.5mm_1000mm.svg",
+      "sha256": "3e40b098ff5da8f1904fb5eb28723eafc4c0faec63b20cbf6068edb8924b0d2c",
+      "size": 304590
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_1000mm/RP_300mu_1.5mm_1000mm_spot_coordinates.apm",
+      "sha256": "6ef1e4e3c093555cfac9fc13c2f424f47a441bf2fca7f64d981b8ebc15f33781",
+      "size": 39512
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_1000mm/mask_template.mt",
+      "sha256": "ebb25eb8e7f773db334ad78e8e82b4be9dd34964cbd53abc986a5e403c9eb991",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_250mm/RP_300mu_1.5mm_250mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_250mm/RP_300mu_1.5mm_250mm.png",
+      "sha256": "68621663d2bcbfa1aed8413220896061361c2bdc7090a5fbb2195d39413da624",
+      "size": 1361167
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_250mm/RP_300mu_1.5mm_250mm.svg",
+      "sha256": "4a9f93935579c541bf26823fba61135be6898e969f8479c0f87e29253d70fcd8",
+      "size": 304590
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_250mm/RP_300mu_1.5mm_250mm_spot_coordinates.apm",
+      "sha256": "6ef1e4e3c093555cfac9fc13c2f424f47a441bf2fca7f64d981b8ebc15f33781",
+      "size": 39512
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_250mm/mask_template.mt",
+      "sha256": "03e68445fb65d7b62e8c6b54367030e842bd5d84eeff677dfd5ae79e5966f0f7",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_500mm/RP_300mu_1.5mm_500mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_500mm/RP_300mu_1.5mm_500mm.png",
+      "sha256": "68621663d2bcbfa1aed8413220896061361c2bdc7090a5fbb2195d39413da624",
+      "size": 1361167
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_500mm/RP_300mu_1.5mm_500mm.svg",
+      "sha256": "ee2cd7c9f01593aef5060936ed939eb9f76c000ed42a468a5738a02c122eb214",
+      "size": 304590
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_500mm/RP_300mu_1.5mm_500mm_spot_coordinates.apm",
+      "sha256": "6ef1e4e3c093555cfac9fc13c2f424f47a441bf2fca7f64d981b8ebc15f33781",
+      "size": 39512
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_500mm/mask_template.mt",
+      "sha256": "78a5cd9a54fc99a85855abdb370c9b1c6906aa0ce48c9e5fc20fa799be3c251c",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_750mm/RP_300mu_1.5mm_750mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_750mm/RP_300mu_1.5mm_750mm.png",
+      "sha256": "68621663d2bcbfa1aed8413220896061361c2bdc7090a5fbb2195d39413da624",
+      "size": 1361167
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_750mm/RP_300mu_1.5mm_750mm.svg",
+      "sha256": "2cd34cd23a35dacb6acd9834c1b0092106e73bc51a7402a77a546178e9cbce62",
+      "size": 304590
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_750mm/RP_300mu_1.5mm_750mm_spot_coordinates.apm",
+      "sha256": "6ef1e4e3c093555cfac9fc13c2f424f47a441bf2fca7f64d981b8ebc15f33781",
+      "size": 39512
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1.5mm_750mm/mask_template.mt",
+      "sha256": "ecfb1e9ff4a1f12e0c17ce37e87ffe0d15af97e8ef5881ea81a6df19747ebb8b",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_1000mm/RP_300mu_1mm_1000mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_1000mm/RP_300mu_1mm_1000mm.png",
+      "sha256": "0e61e2b54a13e545887b5f871b3a8d54780c58265a78f8631931fcd1575af3a1",
+      "size": 2172537
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_1000mm/RP_300mu_1mm_1000mm.svg",
+      "sha256": "bc009b429e56fa1d0d7a4020b772ddc6c46a10e5dac4871988e69136d93e1882",
+      "size": 662123
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_1000mm/RP_300mu_1mm_1000mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_1000mm/mask_template.mt",
+      "sha256": "3cf2a981e82a5cab013d8d1da17b330cd9330e399ef88553ab5b34dc49263949",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_250mm/RP_300mu_1mm_250mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_250mm/RP_300mu_1mm_250mm.png",
+      "sha256": "0e61e2b54a13e545887b5f871b3a8d54780c58265a78f8631931fcd1575af3a1",
+      "size": 2172537
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_250mm/RP_300mu_1mm_250mm.svg",
+      "sha256": "81cf9a2086e26861a8e0bb85b0a8c1b6de5bfd6a4502cac70e959a564076e091",
+      "size": 662123
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_250mm/RP_300mu_1mm_250mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_250mm/mask_template.mt",
+      "sha256": "dcffbf4e81f4f81afb607eba4419a1ffc426f5debde3f0b1e480634087428737",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_500mm/RP_300mu_1mm_500mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_500mm/RP_300mu_1mm_500mm.png",
+      "sha256": "0e61e2b54a13e545887b5f871b3a8d54780c58265a78f8631931fcd1575af3a1",
+      "size": 2172537
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_500mm/RP_300mu_1mm_500mm.svg",
+      "sha256": "b220c3e56c032be3082bfa76dae1af7747f2fbcaaf9713ccca6e666b1879b66c",
+      "size": 662123
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_500mm/RP_300mu_1mm_500mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_500mm/mask_template Kopie.tiff",
+      "sha256": "48df9114900d8a2add88917dd96517414c53450a4ffc13c1abadb73930389d50",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_500mm/mask_template.mt",
+      "sha256": "48df9114900d8a2add88917dd96517414c53450a4ffc13c1abadb73930389d50",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_750mm/RP_300mu_1mm_750mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_750mm/RP_300mu_1mm_750mm.png",
+      "sha256": "0e61e2b54a13e545887b5f871b3a8d54780c58265a78f8631931fcd1575af3a1",
+      "size": 2172537
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_750mm/RP_300mu_1mm_750mm.svg",
+      "sha256": "545a4e3b8213c39ce8df001bdf06055dd8e134fdb83d7c0cb552a5fc68c83486",
+      "size": 662123
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_750mm/RP_300mu_1mm_750mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_1mm_750mm/mask_template.mt",
+      "sha256": "3c1b145bb034d096946f09cbba0e4bacb98fb008e4dddb9a4821fd46c8a1ec77",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_1000mm/RP_300mu_2mm_1000mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_1000mm/RP_300mu_2mm_1000mm.png",
+      "sha256": "187a3c49dc7d62c5752802dd0a0b552f4ef14e46338aaa8b8b2577993a6b2db7",
+      "size": 1084365
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_1000mm/RP_300mu_2mm_1000mm.svg",
+      "sha256": "d0ca17ef1423745c25459b2877178fb40ae2b13420224daa7161e205936c70bf",
+      "size": 186142
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_1000mm/RP_300mu_2mm_1000mm_spot_coordinates.apm",
+      "sha256": "3aa0b53b5fb5c44ca633ee94085aaeb72e9fe32e9862bc5f9bffe89bf7886494",
+      "size": 23412
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_1000mm/mask_template.mt",
+      "sha256": "8c93b5c99c5e25332806203c1648212ea66397e480477cf41d6ad398db31eb97",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_250mm/RP_300mu_2mm_250mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_250mm/RP_300mu_2mm_250mm.png",
+      "sha256": "187a3c49dc7d62c5752802dd0a0b552f4ef14e46338aaa8b8b2577993a6b2db7",
+      "size": 1084365
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_250mm/RP_300mu_2mm_250mm.svg",
+      "sha256": "0dff4ea072f61e911067b55b0238c5103e1a249a708779d971711d1f02c5094f",
+      "size": 186142
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_250mm/RP_300mu_2mm_250mm_spot_coordinates.apm",
+      "sha256": "3aa0b53b5fb5c44ca633ee94085aaeb72e9fe32e9862bc5f9bffe89bf7886494",
+      "size": 23412
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_250mm/mask_template.mt",
+      "sha256": "d97f4834588e89aa0fbdf81e2f7dd40c9887f97df392ffcacc27954d1085e3a3",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_500mm/RP_300mu_2mm_500mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_500mm/RP_300mu_2mm_500mm.png",
+      "sha256": "187a3c49dc7d62c5752802dd0a0b552f4ef14e46338aaa8b8b2577993a6b2db7",
+      "size": 1084365
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_500mm/RP_300mu_2mm_500mm.svg",
+      "sha256": "53b1133b784c1fce252a4420f7fbcb2a500c7517bdedd771d6f5c1e982396c47",
+      "size": 186142
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_500mm/RP_300mu_2mm_500mm_spot_coordinates.apm",
+      "sha256": "3aa0b53b5fb5c44ca633ee94085aaeb72e9fe32e9862bc5f9bffe89bf7886494",
+      "size": 23412
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_500mm/mask_template.mt",
+      "sha256": "37c0491ab2294940e57c36825de194e7e391c935575c669ad0e5e9a5073fb41c",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_750mm/RP_300mu_2mm_750mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_750mm/RP_300mu_2mm_750mm.png",
+      "sha256": "187a3c49dc7d62c5752802dd0a0b552f4ef14e46338aaa8b8b2577993a6b2db7",
+      "size": 1084365
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_750mm/RP_300mu_2mm_750mm.svg",
+      "sha256": "d02ecdeb305885e05f9a1c1c02b9d4c7328a1e62b0f5d8e5fc2c90526d4388bd",
+      "size": 186142
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_750mm/RP_300mu_2mm_750mm_spot_coordinates.apm",
+      "sha256": "3aa0b53b5fb5c44ca633ee94085aaeb72e9fe32e9862bc5f9bffe89bf7886494",
+      "size": 23412
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_2mm_750mm/mask_template.mt",
+      "sha256": "e6b701f72c83d2be78cf4b3554a2c393165410997ff90ea267e6434b4502dfb4",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_1000mm/RP_300mu_3mm_1000mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_1000mm/RP_300mu_3mm_1000mm.png",
+      "sha256": "7f019c6fba19e7ed9e646789e22c1e4412e5d4c669ac87b594d7fd9f9815bda8",
+      "size": 856574
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_1000mm/RP_300mu_3mm_1000mm.svg",
+      "sha256": "bf043079c2a6ef77bedf6b215f372c9b727644060b1ac0e42f925eaefddf8334",
+      "size": 95000
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_1000mm/RP_300mu_3mm_1000mm_spot_coordinates.apm",
+      "sha256": "99259a056acd23a603a31e9f4eb3b0c29e8e849de82948cb74133143281705c0",
+      "size": 11028
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_1000mm/mask_template.mt",
+      "sha256": "b59bdbc81cf940bec50a5fe6f26a9a47eaf85d27ded3d376f7dac632c32bc0b7",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_250mm/RP_300mu_3mm_250mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_250mm/RP_300mu_3mm_250mm.png",
+      "sha256": "7f019c6fba19e7ed9e646789e22c1e4412e5d4c669ac87b594d7fd9f9815bda8",
+      "size": 856574
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_250mm/RP_300mu_3mm_250mm.svg",
+      "sha256": "bca868525b9338febb7194e3e9d9f21da88820e9d62cc3b21cfc69d442ec9dd7",
+      "size": 95000
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_250mm/RP_300mu_3mm_250mm_spot_coordinates.apm",
+      "sha256": "99259a056acd23a603a31e9f4eb3b0c29e8e849de82948cb74133143281705c0",
+      "size": 11028
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_250mm/mask_template.mt",
+      "sha256": "03a9d309075237c3371f106b35cfa3b741127952fff45b7780f48a544345a499",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_500mm/RP_300mu_3mm_500mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_500mm/RP_300mu_3mm_500mm.png",
+      "sha256": "7f019c6fba19e7ed9e646789e22c1e4412e5d4c669ac87b594d7fd9f9815bda8",
+      "size": 856574
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_500mm/RP_300mu_3mm_500mm.svg",
+      "sha256": "82b61264814fdacbf666b676bbec77f55d4fbd78b668349d104b2a1cf655d7f1",
+      "size": 95000
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_500mm/RP_300mu_3mm_500mm_spot_coordinates.apm",
+      "sha256": "99259a056acd23a603a31e9f4eb3b0c29e8e849de82948cb74133143281705c0",
+      "size": 11028
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_500mm/mask_template.mt",
+      "sha256": "ffe378295fd63ab25dc5ce1c607f95f3f108f6da1c2482cc0359ee26985bfb59",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_750mm/RP_300mu_3mm_750mm.ini",
+      "sha256": "aae1bf5fca2d8e0cea913101809539f9fe5f54aa0ccc3ab003f209feff03c298",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_750mm/RP_300mu_3mm_750mm.png",
+      "sha256": "7f019c6fba19e7ed9e646789e22c1e4412e5d4c669ac87b594d7fd9f9815bda8",
+      "size": 856574
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_750mm/RP_300mu_3mm_750mm.svg",
+      "sha256": "3f9b39f5b4b8536a90cfe4b5625d76bb83445d207a1e9a1662f3e2782968fbb3",
+      "size": 95000
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_750mm/RP_300mu_3mm_750mm_spot_coordinates.apm",
+      "sha256": "99259a056acd23a603a31e9f4eb3b0c29e8e849de82948cb74133143281705c0",
+      "size": 11028
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_300mu_3mm_750mm/mask_template.mt",
+      "sha256": "25e8b3ff1cc2fe468640c203e73490f75a73f39416b468be655915527fd9d09e",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600_3.0_illustration/RP_600_3.0_illustration.ini",
+      "sha256": "17760558490cb1008727134d5cad1286276ad4fd68e930f17bb7e00f53d5bb0f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600_3.0_illustration/RP_600_3.0_illustration.png",
+      "sha256": "bcab86e45f8a82edf9130a269cb8ab843bca70a045d1fb7a0a106b82b2cdb57e",
+      "size": 1029243
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600_3.0_illustration/RP_600_3.0_illustration.svg",
+      "sha256": "3500f41c6f8c2e4abd1b50ffc999bb76a42ca364d29cb108839633f2a27cfb3c",
+      "size": 95971
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600_3.0_illustration/RP_600_3.0_illustration_spot_coordinates.apm",
+      "sha256": "5d563c17a1feef644bcd99e3a5b8e95c9ea5fa3ac34059cb1fad1c5ce97559ec",
+      "size": 11154
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600_3.0_illustration/mask_template.mt",
+      "sha256": "436d14335d1547c31be2ec29db71b35f4fd2b1890263ff46c5d173f67726ddbf",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_1000mm/RP_600mu_2mm_1000mm.ini",
+      "sha256": "fe0eb9038584ec2af031d831275b83b955cdcae9c101c2b05a247b11385864f6",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_1000mm/RP_600mu_2mm_1000mm.png",
+      "sha256": "376f25885fa1ca2911694293b0f7855acff7b215da84586cfd56f7d6ea70d10c",
+      "size": 1436859
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_1000mm/RP_600mu_2mm_1000mm.svg",
+      "sha256": "082d2120658b3adc647db7688c633cdca27f598bf86fb6830bdea5d5978b1b33",
+      "size": 187821
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_1000mm/RP_600mu_2mm_1000mm_spot_coordinates.apm",
+      "sha256": "cbb9b01950b52c91e90d00658298c0c3a68626c852cf3d393cb2c06f48c58e02",
+      "size": 23638
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_1000mm/mask_template.mt",
+      "sha256": "696b3130a5d99d8a8f661e8da88110fee5d5918b94ed46f8ec971094e9c83524",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_250mm/RP_600mu_2mm_250mm.ini",
+      "sha256": "fe0eb9038584ec2af031d831275b83b955cdcae9c101c2b05a247b11385864f6",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_250mm/RP_600mu_2mm_250mm.png",
+      "sha256": "376f25885fa1ca2911694293b0f7855acff7b215da84586cfd56f7d6ea70d10c",
+      "size": 1436859
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_250mm/RP_600mu_2mm_250mm.svg",
+      "sha256": "8ce5f079cc5316e7721b4bcc2b359b9e656650af02c6c4a903bcc69b8dc34a87",
+      "size": 187821
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_250mm/RP_600mu_2mm_250mm_spot_coordinates.apm",
+      "sha256": "cbb9b01950b52c91e90d00658298c0c3a68626c852cf3d393cb2c06f48c58e02",
+      "size": 23638
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_250mm/mask_template.mt",
+      "sha256": "b180a3099630cfa2724dfa2d9ed3e6fac14df589bd154703c140a30e2937af49",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_500mm/RP_600mu_2mm_500mm.ini",
+      "sha256": "fe0eb9038584ec2af031d831275b83b955cdcae9c101c2b05a247b11385864f6",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_500mm/RP_600mu_2mm_500mm.png",
+      "sha256": "376f25885fa1ca2911694293b0f7855acff7b215da84586cfd56f7d6ea70d10c",
+      "size": 1436859
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_500mm/RP_600mu_2mm_500mm.svg",
+      "sha256": "0f1d8e4561d18022e5491c31d122db9a49e5ff3957115a5a01b034391bbb7a6e",
+      "size": 187821
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_500mm/RP_600mu_2mm_500mm_spot_coordinates.apm",
+      "sha256": "cbb9b01950b52c91e90d00658298c0c3a68626c852cf3d393cb2c06f48c58e02",
+      "size": 23638
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_500mm/mask_template.mt",
+      "sha256": "6d65a96122965682fdf567b44e31f6bcd0354dc0805053f2df78abe9443ebf89",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_750mm/RP_600mu_2mm_750mm.ini",
+      "sha256": "fe0eb9038584ec2af031d831275b83b955cdcae9c101c2b05a247b11385864f6",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_750mm/RP_600mu_2mm_750mm.png",
+      "sha256": "376f25885fa1ca2911694293b0f7855acff7b215da84586cfd56f7d6ea70d10c",
+      "size": 1436859
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_750mm/RP_600mu_2mm_750mm.svg",
+      "sha256": "cc6ddf277d187745ab135047bf9a6dedc6bb299c5822c2a3aef4a6a184262b99",
+      "size": 187821
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_750mm/RP_600mu_2mm_750mm_spot_coordinates.apm",
+      "sha256": "cbb9b01950b52c91e90d00658298c0c3a68626c852cf3d393cb2c06f48c58e02",
+      "size": 23638
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_2mm_750mm/mask_template.mt",
+      "sha256": "670aba317466913bdc8e1be8446be785919f3099cf632cf64819cfa4f14318e1",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_1000mm/RP_600mu_3mm_1000mm.ini",
+      "sha256": "17760558490cb1008727134d5cad1286276ad4fd68e930f17bb7e00f53d5bb0f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_1000mm/RP_600mu_3mm_1000mm.png",
+      "sha256": "2f701886a4b746426500474abfa7f7246078e188c7c6a0012e6e6827d0683363",
+      "size": 1021498
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_1000mm/RP_600mu_3mm_1000mm.svg",
+      "sha256": "7ec20c3db5b61866bc85cbfbcb77c6d1a9ce98c22ce20814412206dd7a45bacc",
+      "size": 93508
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_1000mm/RP_600mu_3mm_1000mm_spot_coordinates.apm",
+      "sha256": "ae5553d525b3082d8d1856d05764208504f3014b69cf07486a447d03ba993429",
+      "size": 10825
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_1000mm/mask_template.mt",
+      "sha256": "3398de6893547411f60fb6f16ce2db3a791abd523cb6a691e76bb06dec5a8ba3",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_250mm/RP_600mu_3mm_250mm.ini",
+      "sha256": "17760558490cb1008727134d5cad1286276ad4fd68e930f17bb7e00f53d5bb0f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_250mm/RP_600mu_3mm_250mm.png",
+      "sha256": "2f701886a4b746426500474abfa7f7246078e188c7c6a0012e6e6827d0683363",
+      "size": 1021498
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_250mm/RP_600mu_3mm_250mm.svg",
+      "sha256": "e6d8fe586121817912a603d3c7889b31b3ccd257ba5c06c7440d86b3d76aecf7",
+      "size": 93508
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_250mm/RP_600mu_3mm_250mm_spot_coordinates.apm",
+      "sha256": "ae5553d525b3082d8d1856d05764208504f3014b69cf07486a447d03ba993429",
+      "size": 10825
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_250mm/mask_template.mt",
+      "sha256": "51176b946d63ab43442ff8f2a51875a190b81a6a42b0bf0b391daf55438d051f",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_500mm/RP_600mu_3mm_500mm.ini",
+      "sha256": "17760558490cb1008727134d5cad1286276ad4fd68e930f17bb7e00f53d5bb0f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_500mm/RP_600mu_3mm_500mm.png",
+      "sha256": "2f701886a4b746426500474abfa7f7246078e188c7c6a0012e6e6827d0683363",
+      "size": 1021498
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_500mm/RP_600mu_3mm_500mm.svg",
+      "sha256": "ee7cceeb91f36fad0d46b2a1473abe8c82bbde0fa06efab3ae60d7a413c74179",
+      "size": 93508
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_500mm/RP_600mu_3mm_500mm_spot_coordinates.apm",
+      "sha256": "ae5553d525b3082d8d1856d05764208504f3014b69cf07486a447d03ba993429",
+      "size": 10825
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_500mm/mask_template.mt",
+      "sha256": "42e2cbeef28d1b327449ea57e75b3d2977fb8333ef47d85fa4713066c513d5d3",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_750mm/RP_600mu_3mm_750mm.ini",
+      "sha256": "17760558490cb1008727134d5cad1286276ad4fd68e930f17bb7e00f53d5bb0f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_750mm/RP_600mu_3mm_750mm.png",
+      "sha256": "2f701886a4b746426500474abfa7f7246078e188c7c6a0012e6e6827d0683363",
+      "size": 1021498
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_750mm/RP_600mu_3mm_750mm.svg",
+      "sha256": "e8aa19639ab2326730deab9dd899ebfaf714199d9a09e393ae32eba0272399dc",
+      "size": 93508
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_750mm/RP_600mu_3mm_750mm_spot_coordinates.apm",
+      "sha256": "ae5553d525b3082d8d1856d05764208504f3014b69cf07486a447d03ba993429",
+      "size": 10825
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_600mu_3mm_750mm/mask_template.mt",
+      "sha256": "0f7dc256062afe64a34132f2cb897a04f6d2d3d2603f516e931fe5dfc52e6b23",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_1000mm/RP_900mu_2mm_1000mm.ini",
+      "sha256": "3133095114d30bb32ec32eb3c43afd5690fa0a19cebb406a45340283c99f319e",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_1000mm/RP_900mu_2mm_1000mm.png",
+      "sha256": "931c2368172e1b867fcacbf31b8080f2d4c7bf8363660f53c8bfcf5ef3bf4a38",
+      "size": 1747296
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_1000mm/RP_900mu_2mm_1000mm.svg",
+      "sha256": "bbb8909f04457d2db64268c1249f9462c0b5f1bac226042acd0732037ccc98ea",
+      "size": 177204
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_1000mm/RP_900mu_2mm_1000mm_spot_coordinates.apm",
+      "sha256": "e3b5b9da3eb32f063ed4884613c6f40f3314ac4dbd2d7f8885d7317984e442ca",
+      "size": 22194
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_1000mm/mask_template.mt",
+      "sha256": "5e4ebd37ac9692f49aefbc8b7c53fb3dc83db71fce068a9af7a33727b202108b",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_250mm/RP_900mu_2mm_250mm.ini",
+      "sha256": "3133095114d30bb32ec32eb3c43afd5690fa0a19cebb406a45340283c99f319e",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_250mm/RP_900mu_2mm_250mm.png",
+      "sha256": "931c2368172e1b867fcacbf31b8080f2d4c7bf8363660f53c8bfcf5ef3bf4a38",
+      "size": 1747296
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_250mm/RP_900mu_2mm_250mm.svg",
+      "sha256": "58f8825c57055d286e6705731b26b7743c664b015d47b46f89469976c35680d6",
+      "size": 177204
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_250mm/RP_900mu_2mm_250mm_spot_coordinates.apm",
+      "sha256": "e3b5b9da3eb32f063ed4884613c6f40f3314ac4dbd2d7f8885d7317984e442ca",
+      "size": 22194
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_250mm/mask_template.mt",
+      "sha256": "6a070b88c09351a88159ae38464f373b95121e15742d799f3154d9459fc1ffe5",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_500mm/RP_900mu_2mm_500mm.ini",
+      "sha256": "3133095114d30bb32ec32eb3c43afd5690fa0a19cebb406a45340283c99f319e",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_500mm/RP_900mu_2mm_500mm.png",
+      "sha256": "931c2368172e1b867fcacbf31b8080f2d4c7bf8363660f53c8bfcf5ef3bf4a38",
+      "size": 1747296
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_500mm/RP_900mu_2mm_500mm.svg",
+      "sha256": "99fe118ee5111397c1c3d2f818e81827a75a243d7134940c3c2a1fe54eb03e65",
+      "size": 177204
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_500mm/RP_900mu_2mm_500mm_spot_coordinates.apm",
+      "sha256": "e3b5b9da3eb32f063ed4884613c6f40f3314ac4dbd2d7f8885d7317984e442ca",
+      "size": 22194
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_500mm/mask_template.mt",
+      "sha256": "89fb587fa36165c2d4f73eae5b8914dbcbec314a70294a5f2315f7b2f379e1d3",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_750mm/RP_900mu_2mm_750mm.ini",
+      "sha256": "3133095114d30bb32ec32eb3c43afd5690fa0a19cebb406a45340283c99f319e",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_750mm/RP_900mu_2mm_750mm.png",
+      "sha256": "931c2368172e1b867fcacbf31b8080f2d4c7bf8363660f53c8bfcf5ef3bf4a38",
+      "size": 1747296
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_750mm/RP_900mu_2mm_750mm.svg",
+      "sha256": "94e46b3457bc8bb755306d1d2f2760c7d0ad53d63b41d5a74632a85b6fbdb827",
+      "size": 177204
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_750mm/RP_900mu_2mm_750mm_spot_coordinates.apm",
+      "sha256": "e3b5b9da3eb32f063ed4884613c6f40f3314ac4dbd2d7f8885d7317984e442ca",
+      "size": 22194
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_2mm_750mm/mask_template.mt",
+      "sha256": "39d4a35e930ce3c700cde322974ece49aeb96c7730e9dd7d225a1fd828b9958c",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_1000mm/RP_900mu_3mm_1000mm.ini",
+      "sha256": "e384be13e726209e75c843259302ff352c27bc50b9702037a7c3b3617263556f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_1000mm/RP_900mu_3mm_1000mm.png",
+      "sha256": "1f411f2b9e43d4142b1f25f406720b9d909b0fc166a87b1e37aa05d7e130565f",
+      "size": 1206887
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_1000mm/RP_900mu_3mm_1000mm.svg",
+      "sha256": "96c0c4453683993c315fe0d90813053ec64bd4f88c4e2d9cda1ea08bfebccefe",
+      "size": 93813
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_1000mm/RP_900mu_3mm_1000mm_spot_coordinates.apm",
+      "sha256": "a07a91436ef544404e6a788f20501a7ead78940b04d687a553b367352585a392",
+      "size": 10860
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_1000mm/mask_template.mt",
+      "sha256": "05ab30358be1ac3ee266b2ce8e7e3bd0a1417782dac6a21e8dc6d27c7faba600",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_250mm/RP_900mu_3mm_250mm.ini",
+      "sha256": "e384be13e726209e75c843259302ff352c27bc50b9702037a7c3b3617263556f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_250mm/RP_900mu_3mm_250mm.png",
+      "sha256": "1f411f2b9e43d4142b1f25f406720b9d909b0fc166a87b1e37aa05d7e130565f",
+      "size": 1206887
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_250mm/RP_900mu_3mm_250mm.svg",
+      "sha256": "9d09cbff33cfeb3ca7bb82290f72aaa79c03e4e7b9fe54fd59e65022159cefa7",
+      "size": 93813
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_250mm/RP_900mu_3mm_250mm_spot_coordinates.apm",
+      "sha256": "a07a91436ef544404e6a788f20501a7ead78940b04d687a553b367352585a392",
+      "size": 10860
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_250mm/mask_template.mt",
+      "sha256": "809cb330979f57a625099b36e7495153d3095c88706391a6a0bf9f90f352dc38",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_500mm/RP_900mu_3mm_500mm.ini",
+      "sha256": "e384be13e726209e75c843259302ff352c27bc50b9702037a7c3b3617263556f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_500mm/RP_900mu_3mm_500mm.png",
+      "sha256": "1f411f2b9e43d4142b1f25f406720b9d909b0fc166a87b1e37aa05d7e130565f",
+      "size": 1206887
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_500mm/RP_900mu_3mm_500mm.svg",
+      "sha256": "15f4999555f2ea564a8f6907bf92f1acd7d218ea8ca935347bfff0d593dac025",
+      "size": 93813
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_500mm/RP_900mu_3mm_500mm_spot_coordinates.apm",
+      "sha256": "a07a91436ef544404e6a788f20501a7ead78940b04d687a553b367352585a392",
+      "size": 10860
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_500mm/mask_template.mt",
+      "sha256": "713973e26500c3e68aee2f3e3fc6f59f45737af055dc6ac93356605e357cec16",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_750mm/RP_900mu_3mm_750mm.ini",
+      "sha256": "e384be13e726209e75c843259302ff352c27bc50b9702037a7c3b3617263556f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_750mm/RP_900mu_3mm_750mm.png",
+      "sha256": "1f411f2b9e43d4142b1f25f406720b9d909b0fc166a87b1e37aa05d7e130565f",
+      "size": 1206887
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_750mm/RP_900mu_3mm_750mm.svg",
+      "sha256": "92806ba8771f4f1c481ca5673d97b1af9536659254d3ec7027e59282f2f47be1",
+      "size": 93813
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_750mm/RP_900mu_3mm_750mm_spot_coordinates.apm",
+      "sha256": "a07a91436ef544404e6a788f20501a7ead78940b04d687a553b367352585a392",
+      "size": 10860
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_900mu_3mm_750mm/mask_template.mt",
+      "sha256": "2919d4509a0145b7cf33406721815f955776b5b514bff4c4021e5362b3ba8381",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_illustration_mask/RP_illustration_mask.ini",
+      "sha256": "dfb9c24addefdf1d9521111472a6a350a6dff13856a36d1730b7f956fdfe9c10",
+      "size": 720
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_illustration_mask/RP_illustration_mask.png",
+      "sha256": "f746a2b697ff94667111612f7d974fdf3522013ebbabf030d58f8137dd5234de",
+      "size": 604402
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_illustration_mask/RP_illustration_mask.svg",
+      "sha256": "4ce8a9b22ad52590c0e2c0c58496481f1e4785ae7f39213edba1e78a3a57fa79",
+      "size": 28752
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_illustration_mask/RP_illustration_mask_spot_coordinates.apm",
+      "sha256": "54578fafd33e787b8fbc9d7d2d2ee4f48f1cf928bc4ca8dedc4845bfbc4f48e2",
+      "size": 2321
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_illustration_mask/mask_template.mt",
+      "sha256": "6dbd3efd3e64cedc3e0e3253ac52789e96b3dcf6af4589aed019db3fc0a68e60",
+      "size": 2890544
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_illustration_mask/mask_template_.mt",
+      "sha256": "f355d7a4a7ae35ee4d175ebf951d4c45ff97c799136ef9704a4305f0160cccc9",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_test/RP_test.ini",
+      "sha256": "b240f52b364e3137df1a4b133ba6936b1ed9f91e18a7386a3097b2bbb1b58ff1",
+      "size": 723
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_test/RP_test.png",
+      "sha256": "83659461fa0c89c02bde7059ab1d827ec8c197a04fd8c2cdc113c9137e00a1f5",
+      "size": 958067
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_test/RP_test.svg",
+      "sha256": "db91d36761d67937986fd9f1f44686decd16160da9c48bd551766fdc0cf4d8c2",
+      "size": 152634
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_test/RP_test_spot_coordinates.apm",
+      "sha256": "0559b73d8e209f6a7ed34581a71ba0d8a36caa92cfe37f438df5b669c9e20d7b",
+      "size": 18355
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_test/mask_template.mt",
+      "sha256": "a1e0e471c6bc322c2665552fbe0ba17922b7d8789781bbae80b10d7d0233af9f",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_titelbild/RP_titelbild.ini",
+      "sha256": "b240f52b364e3137df1a4b133ba6936b1ed9f91e18a7386a3097b2bbb1b58ff1",
+      "size": 723
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_titelbild/RP_titelbild.png",
+      "sha256": "f4bbd11c36a37b259b3267ebeb877473cb837b0eba2a92003af90a83f1baf6f8",
+      "size": 935594
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_titelbild/RP_titelbild.svg",
+      "sha256": "641a53b4e4d19e4c21d0bdf1da225263de13b339a92d5c4c1fec581ecbd9fd32",
+      "size": 142694
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_titelbild/RP_titelbild_spot_coordinates.apm",
+      "sha256": "c10276c140571c0b7b4ae861d1788dbf84c51713cb9db9e35b34c88ad51a000e",
+      "size": 17038
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/RP_titelbild/mask_template.mt",
+      "sha256": "751b8040bd3be7a2e8a38ae8a3b25c41677dbc1ef23ff0163bd8e43f8726f6cc",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/for_illustrations/RP_illustration_mask/illustration_mask.ini",
+      "sha256": "dfb9c24addefdf1d9521111472a6a350a6dff13856a36d1730b7f956fdfe9c10",
+      "size": 720
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/for_illustrations/RP_illustration_mask/illustration_mask.png",
+      "sha256": "f746a2b697ff94667111612f7d974fdf3522013ebbabf030d58f8137dd5234de",
+      "size": 604402
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/for_illustrations/RP_illustration_mask/illustration_mask.svg",
+      "sha256": "4ce8a9b22ad52590c0e2c0c58496481f1e4785ae7f39213edba1e78a3a57fa79",
+      "size": 28752
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/for_illustrations/RP_illustration_mask/illustration_mask_spot_coordinates.apm",
+      "sha256": "54578fafd33e787b8fbc9d7d2d2ee4f48f1cf928bc4ca8dedc4845bfbc4f48e2",
+      "size": 2321
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/for_illustrations/RP_illustration_mask/mask_template.mt",
+      "sha256": "f355d7a4a7ae35ee4d175ebf951d4c45ff97c799136ef9704a4305f0160cccc9",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.5mm/RP_300mu_0.5mm.ini",
+      "sha256": "78331ec499b3ce38e5c36f43bf4898a485b1ac80f69253f25f11332ffc2b698d",
+      "size": 726
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.5mm/RP_300mu_0.5mm.png",
+      "sha256": "66f5bbc156c0322cb86aacb6c1c5f99b15114d3c6b537496fb06c11edf458714",
+      "size": 5800892
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.5mm/RP_300mu_0.5mm.svg",
+      "sha256": "4941f22a644ef4c47daa875c450a834a9ab5b0fe039a916835e89198b0cb5599",
+      "size": 2558517
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.5mm/RP_300mu_0.5mm_spot_coordinates.apm",
+      "sha256": "3abbf500e8927db4eb9d8cc50f04dd32d24b652172515d617e2ef460ff078288",
+      "size": 345857
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.5mm/mask_template.mt",
+      "sha256": "d2b979f16445ba4621e50dc7ee9cf2817abf072ea32fe8d0627f6e6a04d6467c",
+      "size": 7437071
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.75mm/RP_300mu_0.75mm.ini",
+      "sha256": "9c4387170f8cdf87e307ca465240ab9eee8634c0cec1823b1fef9f531bd365a8",
+      "size": 727
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.75mm/RP_300mu_0.75mm.png",
+      "sha256": "d9a61a52d534c2902b3b21bbc1fb540b61657e0fff2ea1a4d5ff668d1bd130b0",
+      "size": 3106917
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.75mm/RP_300mu_0.75mm.svg",
+      "sha256": "ea73cf3b684f3899be88367f0d934499c95f133a152f633eb60a1ccbba231e12",
+      "size": 1160673
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.75mm/RP_300mu_0.75mm_spot_coordinates.apm",
+      "sha256": "1c01bbac31a072da682f16f17cd7197d05ff2ca767dcb558cd0f73a46093440a",
+      "size": 155808
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_0.75mm/mask_template.mt",
+      "sha256": "34513f29999b00d29367510d5c1280e5b128df2a1d7431b1579e753fd345e3ac",
+      "size": 7437071
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1.5mm/RP_300mu_1.5mm.ini",
+      "sha256": "1ec693c117fb6dace68e962e5de12bd078d076941d9e9038b25a828d338db716",
+      "size": 725
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1.5mm/RP_300mu_1.5mm.png",
+      "sha256": "c7a131ee0c948d9750396dca2419053ed28919cc2feba827776c77116a4e9bdc",
+      "size": 1317817
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1.5mm/RP_300mu_1.5mm.svg",
+      "sha256": "e2ae9d732a6310a4d13c8ff4fb70a11be9f4533e58e5ae5a3840ff13cee46f6e",
+      "size": 304601
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1.5mm/RP_300mu_1.5mm_spot_coordinates.apm",
+      "sha256": "6ef1e4e3c093555cfac9fc13c2f424f47a441bf2fca7f64d981b8ebc15f33781",
+      "size": 39512
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1.5mm/mask_template.mt",
+      "sha256": "e6d01368db08237f43b1f0cd748a83dd5766704828cfbdf11da7866301a3ddb4",
+      "size": 7437071
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1mm/RP_300mu_1mm.ini",
+      "sha256": "b22af7d68dd957928f9f841503433b060bc37736f5ac57cf8ff96059f4b70e34",
+      "size": 723
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1mm/RP_300mu_1mm.png",
+      "sha256": "46ecae0f31a13ddc55af594bdf50e58593248a006189887d792b3a854f849345",
+      "size": 2088998
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1mm/RP_300mu_1mm.svg",
+      "sha256": "2554b68118cc52d077f151be1adf2dd30a5cb0eb5bd6f2cee652f4d04ad3eb76",
+      "size": 662115
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1mm/RP_300mu_1mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1mm/mask_template.mt",
+      "sha256": "b38ee761d4ac5dfdfe169026269c2b929bd7b052466e01d0730fe843b37ae68d",
+      "size": 7437077
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1mm/mask_template_250mm.mt",
+      "sha256": "b38ee761d4ac5dfdfe169026269c2b929bd7b052466e01d0730fe843b37ae68d",
+      "size": 7437077
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_1mm/mask_template_350mm.mt",
+      "sha256": "f287e1092b6de79523f0e6b4936b478ce0f14ac6fa4f1a10a18cb7bd9ee6b7dc",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_2mm/RP_300mu_2mm.ini",
+      "sha256": "739f78f2651b02629d7dab11d43458ce7e8e3c6aaa506397dbbcb38949c28c65",
+      "size": 723
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_2mm/RP_300mu_2mm.png",
+      "sha256": "753bb7244621cce93e1ff00efdfe049bdc66e4eb73fbb78be11c266f9a10c808",
+      "size": 1059878
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_2mm/RP_300mu_2mm.svg",
+      "sha256": "b69f332c3934393bb30c8da2ddf1f79a399fc47a0a2d7bb0ea8c0259dd2c59e3",
+      "size": 186096
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_2mm/RP_300mu_2mm_spot_coordinates.apm",
+      "sha256": "3aa0b53b5fb5c44ca633ee94085aaeb72e9fe32e9862bc5f9bffe89bf7886494",
+      "size": 23412
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_2mm/mask_template.mt",
+      "sha256": "f0c9c9bcccbb74bf7c37d4cb8a4de00d7cf06bae983ba8c2494b331eb990818d",
+      "size": 7437071
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_3mm/RP_300mu_3mm.ini",
+      "sha256": "be226e237107c426005342effdb6d069aadcd186e76c7ffd11153f2262d9eeaa",
+      "size": 723
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_3mm/RP_300mu_3mm.png",
+      "sha256": "6a04da40ca93ff4bb8d5758f25adfb1a78497577c2003a276a873a16b13a832f",
+      "size": 841027
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_3mm/RP_300mu_3mm.svg",
+      "sha256": "384b907e904597a9fc19655b0937b20da346b846f906f9c4f3bd28a858b10d8d",
+      "size": 95012
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_3mm/RP_300mu_3mm_spot_coordinates.apm",
+      "sha256": "99259a056acd23a603a31e9f4eb3b0c29e8e849de82948cb74133143281705c0",
+      "size": 11028
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_300mu_3mm/mask_template.mt",
+      "sha256": "acf0a56a0c703aefe825e31e766992e4a54b210dfcfaa7587d5935e938bcd5fa",
+      "size": 7437071
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_1mm_250mm/RP_600mu_1mm_250mm.ini",
+      "sha256": "77eaa8fd23c190eb48c9d2f3d44152c2c2890f1412339327a69af681dcea9ec1",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_1mm_250mm/RP_600mu_1mm_250mm.png",
+      "sha256": "04738ee6fcc7d6479d03da418e1d9179ee4529c7d47505818aae44203326dc8f",
+      "size": 3496134
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_1mm_250mm/RP_600mu_1mm_250mm.svg",
+      "sha256": "8c668bdd447be708dfb6016a2fafc8feeaec8f48e77df2a458cd9c84193f582c",
+      "size": 690260
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_1mm_250mm/RP_600mu_1mm_250mm_spot_coordinates.apm",
+      "sha256": "fd41bc88b94d6c3f46785007d8042fe292034ccdda185402205dc65e50e261aa",
+      "size": 91896
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_1mm_250mm/mask_template.mt",
+      "sha256": "31980642f4b5fa42c8dd4cb754efe5481dde73bb0d00d7cb1a7f9f1d38d49d50",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_2mm_250mm/RP_600mu_2mm_250mm.ini",
+      "sha256": "fe0eb9038584ec2af031d831275b83b955cdcae9c101c2b05a247b11385864f6",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_2mm_250mm/RP_600mu_2mm_250mm.png",
+      "sha256": "376f25885fa1ca2911694293b0f7855acff7b215da84586cfd56f7d6ea70d10c",
+      "size": 1436859
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_2mm_250mm/RP_600mu_2mm_250mm.svg",
+      "sha256": "8ce5f079cc5316e7721b4bcc2b359b9e656650af02c6c4a903bcc69b8dc34a87",
+      "size": 187821
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_2mm_250mm/RP_600mu_2mm_250mm_spot_coordinates.apm",
+      "sha256": "cbb9b01950b52c91e90d00658298c0c3a68626c852cf3d393cb2c06f48c58e02",
+      "size": 23638
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_2mm_250mm/mask_template.mt",
+      "sha256": "b180a3099630cfa2724dfa2d9ed3e6fac14df589bd154703c140a30e2937af49",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_3mm_250mm/RP_600mu_3mm_250mm.ini",
+      "sha256": "17760558490cb1008727134d5cad1286276ad4fd68e930f17bb7e00f53d5bb0f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_3mm_250mm/RP_600mu_3mm_250mm.png",
+      "sha256": "2f701886a4b746426500474abfa7f7246078e188c7c6a0012e6e6827d0683363",
+      "size": 1021498
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_3mm_250mm/RP_600mu_3mm_250mm.svg",
+      "sha256": "e6d8fe586121817912a603d3c7889b31b3ccd257ba5c06c7440d86b3d76aecf7",
+      "size": 93508
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_3mm_250mm/RP_600mu_3mm_250mm_spot_coordinates.apm",
+      "sha256": "ae5553d525b3082d8d1856d05764208504f3014b69cf07486a447d03ba993429",
+      "size": 10825
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_600mu_3mm_250mm/mask_template.mt",
+      "sha256": "51176b946d63ab43442ff8f2a51875a190b81a6a42b0bf0b391daf55438d051f",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_1mm_250mm/RP_900mu_1mm_250mm.ini",
+      "sha256": "5421865570a3116d9d711cb1f0652ce14fdeb67279a251e810daaa9164c8a3fc",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_1mm_250mm/RP_900mu_1mm_250mm.png",
+      "sha256": "f2bf8a95b6269a8a6baac93634babd456e4cd9dafe73b22a367e11c98471695b",
+      "size": 4508389
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_1mm_250mm/RP_900mu_1mm_250mm.svg",
+      "sha256": "3eaf07620cb0bb6fe88874cef658a470f1434d46c00675b3f7b2c32948938825",
+      "size": 640098
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_1mm_250mm/RP_900mu_1mm_250mm_spot_coordinates.apm",
+      "sha256": "b44f6945c501acf85fa2b7a1b82fe60d147263deffcf967d78ac788987a2c0bc",
+      "size": 85092
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_1mm_250mm/mask_template.mt",
+      "sha256": "83be4adad73e92641e8ae32dfe724ed0ee8c9db8442bed31c663bf3981922d43",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_2mm_250mm/RP_900mu_2mm_250mm.ini",
+      "sha256": "3133095114d30bb32ec32eb3c43afd5690fa0a19cebb406a45340283c99f319e",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_2mm_250mm/RP_900mu_2mm_250mm.png",
+      "sha256": "931c2368172e1b867fcacbf31b8080f2d4c7bf8363660f53c8bfcf5ef3bf4a38",
+      "size": 1747296
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_2mm_250mm/RP_900mu_2mm_250mm.svg",
+      "sha256": "58f8825c57055d286e6705731b26b7743c664b015d47b46f89469976c35680d6",
+      "size": 177204
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_2mm_250mm/RP_900mu_2mm_250mm_spot_coordinates.apm",
+      "sha256": "e3b5b9da3eb32f063ed4884613c6f40f3314ac4dbd2d7f8885d7317984e442ca",
+      "size": 22194
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_2mm_250mm/mask_template.mt",
+      "sha256": "6a070b88c09351a88159ae38464f373b95121e15742d799f3154d9459fc1ffe5",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_3mm_250mm/RP_900mu_3mm_250mm.ini",
+      "sha256": "e384be13e726209e75c843259302ff352c27bc50b9702037a7c3b3617263556f",
+      "size": 724
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_3mm_250mm/RP_900mu_3mm_250mm.png",
+      "sha256": "1f411f2b9e43d4142b1f25f406720b9d909b0fc166a87b1e37aa05d7e130565f",
+      "size": 1206887
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_3mm_250mm/RP_900mu_3mm_250mm.svg",
+      "sha256": "9d09cbff33cfeb3ca7bb82290f72aaa79c03e4e7b9fe54fd59e65022159cefa7",
+      "size": 93813
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_3mm_250mm/RP_900mu_3mm_250mm_spot_coordinates.apm",
+      "sha256": "a07a91436ef544404e6a788f20501a7ead78940b04d687a553b367352585a392",
+      "size": 10860
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/master_designs/RP_900mu_3mm_250mm/mask_template.mt",
+      "sha256": "809cb330979f57a625099b36e7495153d3095c88706391a6a0bf9f90f352dc38",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.5mm_1000mm/mask_template.mt",
+      "sha256": "fd3bf8d8c8ef2dff9097e0a058977be7bb32fe66dfc98af2f82ca9c6f0d3fbf3",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.5mm_200mm/mask_template.mt",
+      "sha256": "dd7e4a50171d3ce6490e45467493a1638bfee900d99496e482d8f195e3f23407",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.5mm_300mm/mask_template.mt",
+      "sha256": "acb6b795275c8ae2dca5baf39011c46e8fb941ab37342c82c4f9b97ed01757a8",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.5mm_400mm/mask_template.mt",
+      "sha256": "64496e51a311dfa69bc4aa0acc6e5bc154c569315c1a46c06af1bb2fb228ef8b",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.5mm_500mm/mask_template.mt",
+      "sha256": "d4253d363e29e49cd08ccb831cc1f5a87d81879034b7c2c68f18828799708fd1",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.5mm_750mm/mask_template.mt",
+      "sha256": "d3b1d4d32b45f7bb00babf2627f279afa737186de133389fc9d208b7cf539d99",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.75mm_1000mm/mask_template.mt",
+      "sha256": "5dcdf4d61715e64adf9f3a8e2c898c18c534e5d369391fabc0cf4cac7667d966",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.75mm_200mm/mask_template.mt",
+      "sha256": "425e0bbe988d8356bdf3e904160ed23e2dad2c60b98a0be253f6326499734ebf",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.75mm_300mm/mask_template.mt",
+      "sha256": "65e9bda60d62ab3cbd8479c15a0f5cf3d5b1aaa830d804b6a6c332dd8772e3e4",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.75mm_400mm/mask_template.mt",
+      "sha256": "8262118c02b38970def5b51ea9b19cc1e30168437d64fd1e6fc6a911ee9469e0",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.75mm_500mm/mask_template.mt",
+      "sha256": "15a19ca64656c7651fafea8a8743f46725a87a3c6e577ce55b351f05850845c3",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_0.75mm_750mm/mask_template.mt",
+      "sha256": "812d4c5df223e687c0945c4645b7a2d28963f1104eac6610ac77e8d0d75781fe",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1.5mm_1000mm/mask_template.mt",
+      "sha256": "033b643b2688bab848343d08afb0cf1e5c6e0bedcd3d5a23d92bf28475b37de0",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1.5mm_200mm/mask_template.mt",
+      "sha256": "07386a4a7dc77d792713e237cbcc71e12c8b4e1a05a4994c60028b7aedde0402",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1.5mm_300mm/mask_template.mt",
+      "sha256": "03eed427465d9be72fd685e26c6f549f0a745b95f95077800b805a29b5344839",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1.5mm_400mm/mask_template.mt",
+      "sha256": "3cfaba124085abbf02db23569fbce54dc7517edd8c1cff8f1d310264258dae38",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1.5mm_500mm/mask_template.mt",
+      "sha256": "d401fe2468d1e43d33caa2ccae2c608b6677a608d6d4f2477bd896771e4054ca",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1.5mm_750mm/mask_template.mt",
+      "sha256": "4cb139be2c62e6ce23637d7366ec6f25c03839e8e7fc48b144f0fb4894963367",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_1000mm/RP_300mu_1mm.ini",
+      "sha256": "b22af7d68dd957928f9f841503433b060bc37736f5ac57cf8ff96059f4b70e34",
+      "size": 723
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_1000mm/RP_300mu_1mm.png",
+      "sha256": "46ecae0f31a13ddc55af594bdf50e58593248a006189887d792b3a854f849345",
+      "size": 2088998
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_1000mm/RP_300mu_1mm.svg",
+      "sha256": "2554b68118cc52d077f151be1adf2dd30a5cb0eb5bd6f2cee652f4d04ad3eb76",
+      "size": 662115
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_1000mm/RP_300mu_1mm_1000mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_1000mm/mask_template.mt",
+      "sha256": "014905331b690cfc3aee1d9da695d4334c3dd339fb95c3f1ec3c07796b528d6f",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_200mm/RP_300mu_1mm_200mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_200mm/mask_template.mt",
+      "sha256": "4c405e5e4c9e9a4c38c4e0a44654b7999a94023f8813a72a0343adc93ea18ad3",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_300mm/RP_300mu_1mm_300mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_300mm/mask_template.mt",
+      "sha256": "bd2726d465e1b2596599bfc68e4b2741bbe327600c9cbdc9323f56dba60b2a8d",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_400mm/RP_300mu_1mm_400mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_400mm/mask_template.mt",
+      "sha256": "0b236261328a9a5a0fedeacfc94ea21297962c2c7ea1a232a87fbe1a73e38115",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_500mm/RP_300mu_1mm.ini",
+      "sha256": "b22af7d68dd957928f9f841503433b060bc37736f5ac57cf8ff96059f4b70e34",
+      "size": 723
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_500mm/RP_300mu_1mm.png",
+      "sha256": "46ecae0f31a13ddc55af594bdf50e58593248a006189887d792b3a854f849345",
+      "size": 2088998
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_500mm/RP_300mu_1mm.svg",
+      "sha256": "2554b68118cc52d077f151be1adf2dd30a5cb0eb5bd6f2cee652f4d04ad3eb76",
+      "size": 662115
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_500mm/RP_300mu_1mm_500mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_500mm/mask_template.mt",
+      "sha256": "c4ec8b27da91e5ef74987d727bba51d9f0889d996873bfe770044ac3cee0e7ef",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_750mm/RP_300mu_1mm.ini",
+      "sha256": "b22af7d68dd957928f9f841503433b060bc37736f5ac57cf8ff96059f4b70e34",
+      "size": 723
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_750mm/RP_300mu_1mm.png",
+      "sha256": "46ecae0f31a13ddc55af594bdf50e58593248a006189887d792b3a854f849345",
+      "size": 2088998
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_750mm/RP_300mu_1mm.svg",
+      "sha256": "2554b68118cc52d077f151be1adf2dd30a5cb0eb5bd6f2cee652f4d04ad3eb76",
+      "size": 662115
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_750mm/RP_300mu_1mm_750mm_spot_coordinates.apm",
+      "sha256": "dfd50fe7364254c96f12f7327b0857cf277f040dd91290945c697a56e79905a6",
+      "size": 88113
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_1mm_750mm/mask_template.mt",
+      "sha256": "df6a8a27e1445c57066c310d595a9b2a69c550cfb35fe66715e66c282df9bad4",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_2mm_1000mm/mask_template.mt",
+      "sha256": "41dd210c82f661d70dff71d7eaf47a1e9fbf4e80f1881c8e135cff94ca558a81",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_2mm_200mm/mask_template.mt",
+      "sha256": "6ceea657fdcb99ff8849a5aa0f61eab6c677b8e5f6cda4e4b47ed98967a91f17",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_2mm_300mm/mask_template.mt",
+      "sha256": "29afd2f0c8cffee36a819f4cee8590baabdd196a567c22ba22818893726038d0",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_2mm_400mm/mask_template.mt",
+      "sha256": "19de54298a2f2ec2ad54038558fe28b4c47cabf8f4c89724d69b942821ff9636",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_2mm_500mm/mask_template.mt",
+      "sha256": "201a327b8cbef1543c6c40acf444f3b54629de2cad3ca88a698a0a524105a2c3",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_2mm_750mm/mask_template.mt",
+      "sha256": "05a3f2475eb6d9baf81ebc1cdab0a68c4d6824ed8b11bd67dbd6f48af720e96a",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_3mm_1000mm/mask_template.mt",
+      "sha256": "5a80140e5923f149166cf47d1f407e2438446c7788ae7e6418c540b076e49ab3",
+      "size": 7437075
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_3mm_200mm/mask_template.mt",
+      "sha256": "4f3c70b272fef95c8b16ac189c7050bf8ef4a6559060ecb177e0dbcaf72431cb",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_3mm_300mm/mask_template.mt",
+      "sha256": "7402af48612f0fc69e4ccd847eb53716bdff38c32a0a300f6d367bf90f596dcb",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_3mm_400mm/mask_template.mt",
+      "sha256": "0326488ff9495a0a0583840dc7da47ece4b23faa4a31e262ce40d1c3dfe0bb5b",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_3mm_500mm/mask_template.mt",
+      "sha256": "4eb5ecbc992893d42dcdc9b5f612df8cc5507a700406619c436cadebcf48b921",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/aperture_mask_templates/not_used/RP_300mu_3mm_750mm/mask_template.mt",
+      "sha256": "f779f40138e026683f926019685f314c2b617008593b02af1a0141a5d3f91291",
+      "size": 7437073
+    },
+    {
+      "path": "pandora/maps/cam_settings_6400C.xml",
+      "sha256": "426027e3e1f48d1074c18322fa263e86679cc4fd5b795eb9dc48e83ad041478b",
+      "size": 26006
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040.xml",
+      "sha256": "314181978ad4735ec140591cb0c035ff83161a31b8e9cee70bffac871168afd4",
+      "size": 21360
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_.xml",
+      "sha256": "72d36ed0d0d20e835b157d15233ad2e3eb1620a6eb6fce0ef610e7efd7e12324",
+      "size": 21364
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_ROI_Spot1.xml",
+      "sha256": "9c34bbe1ce98b482fcab12d756aa2f9ccc1e2c415a84eb831b387eb029cd9f6b",
+      "size": 21362
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_ROI_Spot2.xml",
+      "sha256": "c54ca9b81d0d5fdfbeeb6e0ef69a39dd5b37381a14b790f93e6da7da0036b4b8",
+      "size": 21362
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_ROI_Spot3.xml",
+      "sha256": "4180d4c6f4fddc598984971a4252f31b00e298c52a606de9df080ded3e18a8c1",
+      "size": 21363
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_ROI_Spot4.xml",
+      "sha256": "22c78c9409b86c787130cee0606e1237343397491f1e7ac10d0c1972b6bb6008",
+      "size": 21362
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_ROI_Spot5.xml",
+      "sha256": "0091cdebf21aca08351b6cc28481bb2a9e6017cc21196e633f2ef559ef4efc38",
+      "size": 21361
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_ROI_Spot6.xml",
+      "sha256": "0c0f141dfc61f10e63dbf64ca15efb4d04fe8fc5b78b7ad223cc0b21a5081352",
+      "size": 21361
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_ROI_Spot7.xml",
+      "sha256": "0b8fcb652f0708de286c4ae29c9aa4e1b1b076de2e14e5e9ba2165a5d4180794",
+      "size": 21361
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_ROI_Spot8.xml",
+      "sha256": "b5de58d47ca99ac4a22eaad188ba47ef40982097442cd6bcccb1bab928991d64",
+      "size": 21361
+    },
+    {
+      "path": "pandora/maps/cam_settings_GE2040_ROI_Spot9.xml",
+      "sha256": "5877ff4203d473ccdf2bc8b6c70b77e6b74a867d1d556bc507e1edacaaa1adcc",
+      "size": 21362
+    },
+    {
+      "path": "pandora/maps/cam_settings_GT3300.xml",
+      "sha256": "9a9bb6d513175577cb82b31d89f86f61aad017a5e37d32343a7f20c3debf2b80",
+      "size": 23207
+    },
+    {
+      "path": "pandora/maps/cam_settings_manta.xml",
+      "sha256": "973b8272efa2f0e3cb4b3463c77e50f09328d8349ab9de9dcdf040591bf34ce4",
+      "size": 465925
+    },
+    {
+      "path": "pandora/maps/centerCalculation.py",
+      "sha256": "e95dc52f655cad935c7e6740c78c15dc827fc97110245ca16092e74730a7ef1a",
+      "size": 32003
+    },
+    {
+      "path": "pandora/maps/detector.py",
+      "sha256": "6d5b9f3719c1544ee68f2e70ea497823f409302b9cd2d815b473147c64918c19",
+      "size": 21205
+    },
+    {
+      "path": "pandora/maps/mapsController.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/maps/markers/SafeMAPSMarkers.ipynb",
+      "sha256": "3b6e38618a299416d953d727a69306cb4357854c0dc908a75bf46196bd0d5996",
+      "size": 21225
+    },
+    {
+      "path": "pandora/maps/markers/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask.json",
+      "sha256": "5b6aa26882f245e2da2ed06c717fa6081bb4d60983775cc9d39ec48df31d4604",
+      "size": 13
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask.npy",
+      "sha256": "d921f4dcf3c38635d52c04ebf305154829da45da0bd8dbd7c798c7bb3929676f",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0000.npy",
+      "sha256": "d921f4dcf3c38635d52c04ebf305154829da45da0bd8dbd7c798c7bb3929676f",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0005.npy",
+      "sha256": "fd5ef0c15ae5c68b0e0e6dfeb10af7eb66b1052c1f30bb030ae651a5b5f80818",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0010.npy",
+      "sha256": "fe57931fd927e2cfcfd845fcd0573438f5db7f7205d932ecd34d3a295db55a0e",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0011.npy",
+      "sha256": "c96476a454cea497904826ea3aaca398a90f0919204da5c84ffe959a6a0d4787",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0012.npy",
+      "sha256": "30a4bbb041fbf92118f089ce34bcbe39801c50161e8102c9a7501f46e96766c0",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0014.npy",
+      "sha256": "53c0fee297af5b1ab464ac5cd620e8739f0c17ecdca42ecc722ef80627c50fe2",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0015.npy",
+      "sha256": "84db843bd2a8f29fb41b0b6e0f91cbda137951191c10ff4d3af154d1194763c0",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0016.npy",
+      "sha256": "15dfbc336372e5ef63b80a9019f1e7d80a3857303bde1a05a4eec0542d20ab60",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0020.npy",
+      "sha256": "c9f362478ea2698ac339bcacc944cd5aa6235514131ced6b8f849ed21f73460c",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0025.npy",
+      "sha256": "82be2a6754d25ad5ed069cb89077db5abfcfed717fb4ed6e964339d49da9f718",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0027.npy",
+      "sha256": "37b4b6ce98108bf56d65ba83a4838e36db50679f1c68c663021a16f8d0f67822",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0030.npy",
+      "sha256": "7397d86429d2eaf84279f2e9b641a9b44557002097d7d897b1fc91fbde91e705",
+      "size": 1499528
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0040.npy",
+      "sha256": "7b703153cd1d098b397e11277f45e8c1bb04000b27d3680e0d4e9d70d1337258",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0050.npy",
+      "sha256": "25409d20bbe3968979206921d1ad1f93cdb29eda2b05b5915177249f87bb3bf1",
+      "size": 1499528
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0055.npy",
+      "sha256": "4ef81cf083f9fbd281198899e30b8c70bc04907a6c692681a36a682303892630",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0060.npy",
+      "sha256": "a6e40de588c19463b0d7526d393b3ea6fdf11bc16e44e43bec0e4c7d5ec30511",
+      "size": 1499528
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0070.npy",
+      "sha256": "c66f9500671012845d7288c89e246abebe901c641bbdd50d212b35a7400b67ee",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0080.npy",
+      "sha256": "0fefbd6a21be6abcb39e55bc65d8bb28affc639c23ca5aa7060a525ecfa7b05e",
+      "size": 1499528
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0090.npy",
+      "sha256": "4dd75f6cdb3e6dbb7de8ad74a2f69a1ace566e6b0f32e6b390be99d82f87b27c",
+      "size": 1499528
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0100.npy",
+      "sha256": "7b86401001468f442c9fe6c48ca4450789b3e99f0b4dd701bcb659dbbdd291a8",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0110.npy",
+      "sha256": "162f331f6c851f8e6bdb3618351225c5acdf5c9e1ed1c26ef91283fcb811bf81",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0200.npy",
+      "sha256": "2d5540d8f6c27f7fe29db047894c058617262f16e48a8cdf1622a74ed8695a4e",
+      "size": 1499568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0220.npy",
+      "sha256": "6b0630909ceea3816923f0294dd7cd0751d23d35aba4a467b91d351a60b921ee",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0330.npy",
+      "sha256": "679171e3b7bc61091bd267d78f085cf5be01fd990c53de8e37eb8933f167a924",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/centers_on_Mask_random_0.0440.npy",
+      "sha256": "bfd7bdc59944e805c818491df52cc53494e6600c001d9555bf1e08d45abbf059",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/empty_marker.npy",
+      "sha256": "4212cef2bd87620899938a2815bb3281856111d9ca032ba6fbd8a56ecb3cf359",
+      "size": 192
+    },
+    {
+      "path": "pandora/maps/markers/emtpy_marker.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/maps/markers/marker_spot_order.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/maps/markers/marker_spot_order.npy",
+      "sha256": "19c510823b3237bad4279d7bc16799dfb3258d3a6e10ff1557d9f981e8063408",
+      "size": 256
+    },
+    {
+      "path": "pandora/maps/markers/markers_ApertureNo.npy",
+      "sha256": "9c5a012a13ca01ad834f748bc0608e64fa9aa903d62aecdfa1e7e6e9072759be",
+      "size": 856
+    },
+    {
+      "path": "pandora/maps/markers/old_centers_on_Mask.npy",
+      "sha256": "c539516f38401dbf99abb03e4d33941db77de46b4f4c3a6c38f106d85d44572f",
+      "size": 1638568
+    },
+    {
+      "path": "pandora/maps/markers/old_marker_PosRowCol.npy",
+      "sha256": "5969b9689637a2a9302e55d299c151b8536876e80aabcf84a75658e7e4d0045b",
+      "size": 856
+    },
+    {
+      "path": "pandora/maps/markers/old_template_bits.npy",
+      "sha256": "38683cfa6b9957f30d08a1f0bee987706c26461d06c7ce1f225c7050e6c0d7bd",
+      "size": 5952
+    },
+    {
+      "path": "pandora/maps/markers/template_bits.npy",
+      "sha256": "4b59ae0bd43845e0c2efbd32c0c7b1fbc15d0ed47f00da475eab0c0b56a9dc62",
+      "size": 5952
+    },
+    {
+      "path": "pandora/maps/markers/template_bits_rrot.npy",
+      "sha256": "fc1c8fa8eaf44458eb03a0a67a06dafc882aac70895c52a4d0d795d2b2a7c152",
+      "size": 5952
+    },
+    {
+      "path": "pandora/maps/markers_old.py",
+      "sha256": "1aa17280930090826b888f0ee08f16281ee441fb32af23965695a92afd277304",
+      "size": 33873
+    },
+    {
+      "path": "pandora/maps/peak_finding.py",
+      "sha256": "15a5fce171c994d25669d7036c6784d2546e8523ba0273cc18efcb8cd82ef729",
+      "size": 36823
+    },
+    {
+      "path": "pandora/maps/reference_intensity_distance.csv",
+      "sha256": "9b00bed854f7731a2198b548368a1d3904dca7ebefec8e75ae554032d334f43d",
+      "size": 2526
+    },
+    {
+      "path": "pandora/maps/results.py",
+      "sha256": "40af9e8e879f123450cf82459c8337490215b51e2301e30b24e9af9d15e48042",
+      "size": 10385
+    },
+    {
+      "path": "pandora/maps/shapeCategorising.py",
+      "sha256": "bd7abae2add7ad1132e72bc1d5c4edd5a3be13a655ab458424bea39b886e4cc2",
+      "size": 2353
     },
     {
       "path": "pandora/math_pcaps.py",
@@ -47,9 +3447,854 @@
       "size": 9205
     },
     {
+      "path": "pandora/milling_files/CCR10SPRO_Adapterplatte.gcode",
+      "sha256": "3dd60457f93767b84b7713946b8f33a3db40c21afb596b05a835321b5e359a49",
+      "size": 5565271
+    },
+    {
+      "path": "pandora/milling_files/complete.tap",
+      "sha256": "a2444b6de4e36b877490c62a9ab745bd8ed54fac648dd5e4c232903086c656d8",
+      "size": 13039
+    },
+    {
+      "path": "pandora/milling_files/snake_slot.tap",
+      "sha256": "351389753aaa42eed65d2322c6799fa9549eb97a41e2ff8d34e3cb858d3fa86d",
+      "size": 2303
+    },
+    {
       "path": "pandora/minimal_test.py",
       "sha256": "e1eb0ef42a9517cc0146cb0ac2ecfb1b19c5bdb9fc780a12549375c2faaa902f",
       "size": 1233
+    },
+    {
+      "path": "pandora/neural_network/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/neural_network/dataSet.py",
+      "sha256": "496757489683b5effa966d9402407b98944c7683523514aa239ff2cbac42aeed",
+      "size": 3355
+    },
+    {
+      "path": "pandora/neural_network/imageRegresionToolkit.py",
+      "sha256": "c85b5df646261f0d8ac4fc43cada407380e25b2a1f404e8d32024904cc2c75d9",
+      "size": 15034
+    },
+    {
+      "path": "pandora/neural_network/imageRegression.py",
+      "sha256": "669e9f940c7868bd2893cc9b613c40c045aae407405a9802cc0573bd877c866c",
+      "size": 43225
+    },
+    {
+      "path": "pandora/neural_network/imageRegressionCallbacks.py",
+      "sha256": "fa4ab3c90a27854a58f0ab61147824c3de9f8c670be8a488bc1f87e113a004e3",
+      "size": 5510
+    },
+    {
+      "path": "pandora/neural_network/imageRegressionCore.py",
+      "sha256": "3e9e75f284753ad796f125b8814655ef1ef528e8ed0b0ff5a7e6b45346e728f6",
+      "size": 18916
+    },
+    {
+      "path": "pandora/neural_network/imageRegressionModels.py",
+      "sha256": "3487524b1511f90f6243d8cd1b65d62a2b33b3f3f834c7efad56c031d048707a",
+      "size": 14515
+    },
+    {
+      "path": "pandora/neural_network/model.h5",
+      "sha256": "622dbb0d746de4835aefa22411e6187021a5063f6a03824fc00f4ccccc2d0554",
+      "size": 23072440
+    },
+    {
+      "path": "pandora/neural_network/modelTuner.py",
+      "sha256": "0db2e01dbaeffd4a9218f0540fd088f45582a8d80c66a331f219d9cc67ab1e53",
+      "size": 11836
+    },
+    {
+      "path": "pandora/neural_network/model_600-650mm.h5",
+      "sha256": "80bc8a7f98abe1c4aa52b7b9966067b30a90e1b7a422e3895dcf4699a7fe2b88",
+      "size": 15697040
+    },
+    {
+      "path": "pandora/polishing/ImageAcquisitionSynchronous.py",
+      "sha256": "abe1a9175ee33ec48285e453056f644b7dd515b9fb87cd5ef6f0bc092e2df703",
+      "size": 24041
+    },
+    {
+      "path": "pandora/polishing/ImageDataManager.py",
+      "sha256": "3afc98d4b4aaf1d3b8c3246cc11cd125986b4b08aa4464f172a088b2627d2342",
+      "size": 1958
+    },
+    {
+      "path": "pandora/polishing/ImageDataTypes.py",
+      "sha256": "575bfc7a8f18ff5be81a9a8ebf680bdf534b583b71ac8f204ffd11e89bf99078",
+      "size": 330
+    },
+    {
+      "path": "pandora/polishing/PolishingImage.py",
+      "sha256": "c8c5c1e2b1ebc3038793fd67557893774d9d2417cfeddc1e8b361e809442a172",
+      "size": 14542
+    },
+    {
+      "path": "pandora/polishing/PolishingImaging.py",
+      "sha256": "67429ab2d2fee502dbe07a53d36ad7eb01c9de373938c9aaf35867ef1c6605cd",
+      "size": 15533
+    },
+    {
+      "path": "pandora/polishing/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/polishing/image_processing/advanced_parameters_dialog.py",
+      "sha256": "47c10657e2b7d0387343bebb9791461bf696025fbd5e9b373fc2043bfe33d6e7",
+      "size": 4691
+    },
+    {
+      "path": "pandora/polishing/image_processing/alternative_tracking_operations.py",
+      "sha256": "9e6a6115c657f2fdc2a47e012eed74f469c7c052efbc7c51b147a160d98fffd3",
+      "size": 36789
+    },
+    {
+      "path": "pandora/polishing/image_processing/analysis_handlers.py",
+      "sha256": "b9c67baea866749e446b9e747b253aed9433c9bc87cb2fd64ef634b7c834b259",
+      "size": 9432
+    },
+    {
+      "path": "pandora/polishing/image_processing/background_operations.py",
+      "sha256": "308670e3281e9c89f12bc26ab2272703f58c89701620532c90dd8b8d5aa14d45",
+      "size": 28157
+    },
+    {
+      "path": "pandora/polishing/image_processing/batch_operations.py",
+      "sha256": "b06b70739aabccf51f694311c93cbbeaa35337253c88341bae8ac08536b26b53",
+      "size": 10090
+    },
+    {
+      "path": "pandora/polishing/image_processing/detection_workflow.py",
+      "sha256": "7271dee1a5f5906c5efc28408f67c440437c0daaf17ca75918be8721fd962ce6",
+      "size": 15370
+    },
+    {
+      "path": "pandora/polishing/image_processing/evidence_operations.py",
+      "sha256": "26313ca819916c7c0375f6715f7bb8ae652782b2d9d1a38691fc9a36483eaded",
+      "size": 18192
+    },
+    {
+      "path": "pandora/polishing/image_processing/export_ops.py",
+      "sha256": "9e4b60fdda5901dc5c81a70c3753a54297f24298675631b078f636f94cc4b3c1",
+      "size": 3565
+    },
+    {
+      "path": "pandora/polishing/image_processing/folder_manager.py",
+      "sha256": "0e7275b3638c4d62720d94c94b70c513c0940935c480c6e46d8aa793b0aedfe2",
+      "size": 10359
+    },
+    {
+      "path": "pandora/polishing/image_processing/frame_filtering_operations.py",
+      "sha256": "59e622e619a5fb7f6a40ce6e38bd6a8cfb150dbde1bc94788f7091c885a576f4",
+      "size": 5942
+    },
+    {
+      "path": "pandora/polishing/image_processing/image_utils.py",
+      "sha256": "7b38bd6b7e35ad2fa71169ccfb61d50e3b7421ea665c349ecfd7104b9a203d19",
+      "size": 5313
+    },
+    {
+      "path": "pandora/polishing/image_processing/interpolation.py",
+      "sha256": "6a30b1292af47829b2e082aae59468f9cb2245300d9b548075afced98bf9ead4",
+      "size": 3254
+    },
+    {
+      "path": "pandora/polishing/image_processing/interpolation_operations.py",
+      "sha256": "66046bf9f1d965ffe0e9a9694ec531a229e0a51cbaca7164eb035a4719eb769c",
+      "size": 4413
+    },
+    {
+      "path": "pandora/polishing/image_processing/io_ops.py",
+      "sha256": "b933b47b4cfad61c016ddd74577db7cf99f59ace220f2cfb0486e5f517825378",
+      "size": 5940
+    },
+    {
+      "path": "pandora/polishing/image_processing/metadata_operations.py",
+      "sha256": "27b8cdf7c2638b3cd52fcc3c7823eb861d8b04d58321c0c38a1842f805fa2a6d",
+      "size": 5495
+    },
+    {
+      "path": "pandora/polishing/image_processing/movement_analysis.py",
+      "sha256": "5434068f6f9db45badc47e8147e20dff76cc1a9ae01af36b64f781c560c8c60e",
+      "size": 12160
+    },
+    {
+      "path": "pandora/polishing/image_processing/navigation_helpers.py",
+      "sha256": "e8c489ceba4b0665317072e9727176c98fcf75dd2979b1cf5698ab80ded019d8",
+      "size": 9135
+    },
+    {
+      "path": "pandora/polishing/image_processing/params.py",
+      "sha256": "57ca5bc5ad7a51f9c3663ba119076b8146b37bc94c75b33ac0791a9cdc0cf69d",
+      "size": 233
+    },
+    {
+      "path": "pandora/polishing/image_processing/path_analysis_operations.py",
+      "sha256": "f6763690d3d12cfc07f156f62bdb289a89e216d735c9ee194b7855d23ae9eecb",
+      "size": 5022
+    },
+    {
+      "path": "pandora/polishing/image_processing/review_operations.py",
+      "sha256": "ebaf363c71c3809ffc1268750b88a8d14feaf0bc697992d61531ae64b0f90401",
+      "size": 28088
+    },
+    {
+      "path": "pandora/polishing/image_processing/roi_operations.py",
+      "sha256": "4e080887a8690ed671bc8630ca19d00534458e4b1b1d3517d7bcd67b2e7f628e",
+      "size": 8672
+    },
+    {
+      "path": "pandora/polishing/image_processing/seg_ops.py",
+      "sha256": "6c526180ff052c576c0cc26de6a45b44adf34de6cd64c119cce5dd49ca1f8304",
+      "size": 4023
+    },
+    {
+      "path": "pandora/polishing/image_processing/segmentation_step_operations.py",
+      "sha256": "76b46ba9d2c4b52cf6657531be9bee9fad07ba8603a2a9b79f864c1f9c383033",
+      "size": 67854
+    },
+    {
+      "path": "pandora/polishing/image_processing/session_manager.py",
+      "sha256": "2d0ac66cd4f9c4482196f6d1337c965a33b28d8895781a88d06d7952a4b7290f",
+      "size": 14900
+    },
+    {
+      "path": "pandora/polishing/image_processing/tcp_path_correlation.py",
+      "sha256": "1183566e964362f93cdd6148a3383c9f2aef3aeb7d90f9013b10e501b279d553",
+      "size": 18728
+    },
+    {
+      "path": "pandora/polishing/image_processing/tcp_path_operations.py",
+      "sha256": "cb81e1f0b4a333f99d06042ec5e4f0dedb4438420f5dcf2cdd6cefc9005ae4a6",
+      "size": 18145
+    },
+    {
+      "path": "pandora/polishing/image_processing/threshold_operations.py",
+      "sha256": "7a929ba4b1bd576cbce8a707ee753eabd7cfc445a39939e243ea987008b1f2e3",
+      "size": 4732
+    },
+    {
+      "path": "pandora/polishing/image_processing/tracking_operations.py",
+      "sha256": "ee04f74c4500e9356efce3ed844ffbb440372e3c367044a8538a04477f6b5581",
+      "size": 46618
+    },
+    {
+      "path": "pandora/polishing/image_processing/tracking_session_operations.py",
+      "sha256": "9b64eff0e41185aadefc7a0820440ffc13a1f26adc91313420ac3f0726a8f140",
+      "size": 19254
+    },
+    {
+      "path": "pandora/polishing/image_processing/ui_initialization.py",
+      "sha256": "b70e20818ade53009f07821ff9e85e900f1622d052442148aba7e9e82f8dc95f",
+      "size": 16374
+    },
+    {
+      "path": "pandora/polishing/image_processing/ui_state_manager.py",
+      "sha256": "81d3f37830fd7854c91b9955ded8d0d31183030511379f7f243f17107a9bb2fa",
+      "size": 28395
+    },
+    {
+      "path": "pandora/polishing/image_processing/viz_ops.py",
+      "sha256": "ffae7caaa4fab316189354d5ac018e670769bf417b36d2b04cb326f0a4466170",
+      "size": 5658
+    },
+    {
+      "path": "pandora/polishing/interferometryProcessing.py",
+      "sha256": "6e0e94aa752db4ed639efed903c27c6ec17a1451c77e2889187178da6cd52a82",
+      "size": 76436
+    },
+    {
+      "path": "pandora/polishing/interferometryStatistics.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/polishing/interferometryVisualizer.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/polishing/interferometry_controller.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/polishing/padConditionAnalysis.py",
+      "sha256": "bef5258e0d43d0b179d71c5d5e0b205724c4b8bca868f21c05df58c5a9bee742",
+      "size": 4565
+    },
+    {
+      "path": "pandora/polishing/surface_data.py",
+      "sha256": "ab60ac7c22e3b1d657fa23569f204164ed78e49363e236070686e265658c5239",
+      "size": 5935
+    },
+    {
+      "path": "pandora/printing_files/2203081406_SCP_ear.gcode",
+      "sha256": "ff921526ae18afc4e38539b4c350db13783ee9683001714a8e4a2f8375193032",
+      "size": 315505
+    },
+    {
+      "path": "pandora/printing_files/2203081500_SCP_ear.gcode",
+      "sha256": "6da34f31ee98cfdbbac48c069e2a742f574755f11a66e2b261fda28f9f40f5e5",
+      "size": 318019
+    },
+    {
+      "path": "pandora/printing_files/2203111450_SCP_ear TEST4000.gcode",
+      "sha256": "0f5f173f2ce8bd015e1c778d94e295ae2a80ec88dfee39e984bf70505ce8ae65",
+      "size": 375808
+    },
+    {
+      "path": "pandora/printing_files/2203111450_SCP_ear.gcode",
+      "sha256": "25df7cab1218fb9eaed05d17b696c075d71ac8284a554394d2be50f263ef6764",
+      "size": 375750
+    },
+    {
+      "path": "pandora/printing_files/Kreisbahn_AR45r25a10.txt",
+      "sha256": "a4a7f1fb41d034712c73ea7bdf7dc730074f95d1e985b0ff3688cfff067e6b38",
+      "size": 18231
+    },
+    {
+      "path": "pandora/printing_files/Kreisbahn_AR45r30a10.txt",
+      "sha256": "4c5a10637f493c2ff75d8e18fd4ebafe99f1231d7aed5548f70f8c93bdf67ec4",
+      "size": 24127
+    },
+    {
+      "path": "pandora/printing_files/Kreisbahn_TESTING.txt",
+      "sha256": "8356aa19a81d0de95a536ab0ab0ceeec04ac1807a83670e31232862c1f02aa45",
+      "size": 36466
+    },
+    {
+      "path": "pandora/printing_files/RECHTECK_TEST.gcode",
+      "sha256": "2eb8b6167e5ebe01677c52a2b9616087adb047d34f75473006e042ad0608baae",
+      "size": 854
+    },
+    {
+      "path": "pandora/printing_files/Spiralbahn_AR45r30a15.txt",
+      "sha256": "7e450f1aa26838dc74703d546c83beab5848b6c6719d0ec9ea99d3d8a2d4090e",
+      "size": 12118
+    },
+    {
+      "path": "pandora/printing_files/X-Meander80x20sx1sy5.txt",
+      "sha256": "c3c33ca8df551e49d5989d81678099ae34e854c03967247c9fcfb33451ae1855",
+      "size": 20649
+    },
+    {
+      "path": "pandora/printing_files/X-Meander80x40sx1sy5.txt",
+      "sha256": "ebbd65fd0e229ba9a10f87e2072615f75d4b97465a46faa3147a89fb0baa5590",
+      "size": 34979
+    },
+    {
+      "path": "pandora/printing_files/zaphod punkte.txt",
+      "sha256": "519a86443181dac43ecb5349b5d7654c7889a44de179225a3fb8692b081253fc",
+      "size": 202989
+    },
+    {
+      "path": "pandora/resources/2D_psd.png",
+      "sha256": "274eca36d097d5c45533bb3f93407e1aa5777d432a9e1d3a63a9b0cb40e830ee",
+      "size": 492
+    },
+    {
+      "path": "pandora/resources/3d_viewer.png",
+      "sha256": "8ad1f9f774a068825cdc986ec3c7a926e2c77e8de3fc92bb7b88350268ddf14c",
+      "size": 13542
+    },
+    {
+      "path": "pandora/resources/LeastSQCircle.png",
+      "sha256": "6898f4fd4c34094e6b136f33a46a1e2e8f687846a4085ced2e7f5908a45cb861",
+      "size": 19928
+    },
+    {
+      "path": "pandora/resources/Polishing.png",
+      "sha256": "2673bcf3db6024a0f84e2b571379dad2830224370883d5728ab66f21542811d3",
+      "size": 44379
+    },
+    {
+      "path": "pandora/resources/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "pandora/resources/add_data.png",
+      "sha256": "30fed96b141bcc7c647d89bfac59aeef211583b168484a2c0d93da3f305895c0",
+      "size": 6295
+    },
+    {
+      "path": "pandora/resources/analyzing.png",
+      "sha256": "05673fefcfcb1499de537909fb31adeb926602a539c6fb3d6af13f145d050d3c",
+      "size": 31261
+    },
+    {
+      "path": "pandora/resources/apply.png",
+      "sha256": "de068394f07e60d27dae4e362f785bc4be2f67890d16aacbb145f10929589eb1",
+      "size": 93813
+    },
+    {
+      "path": "pandora/resources/arrow_right.png",
+      "sha256": "b4fa2773745ea1b772bcffebd48a4112437108d7b9b7d0290127f464f9d59f39",
+      "size": 481
+    },
+    {
+      "path": "pandora/resources/arrow_up.png",
+      "sha256": "22e5addafc37626f6fb4fea3955285527ffb74458a4194799793c5abb2e2c386",
+      "size": 29606
+    },
+    {
+      "path": "pandora/resources/average.png",
+      "sha256": "b523a6b356bc6fcd451f617e5f059180ca7eff8afa72d86d5c0b4a552d8babc2",
+      "size": 66792
+    },
+    {
+      "path": "pandora/resources/averagePlane.png",
+      "sha256": "6c666132c524d43c3b1ef71b6a023a5c09034fefc45c8595e7545726b82b08e9",
+      "size": 8722
+    },
+    {
+      "path": "pandora/resources/bandpass.svg",
+      "sha256": "34d706682309ef184ab39c349203113e4705cf6b156211e9db84b2c838f548f1",
+      "size": 4633
+    },
+    {
+      "path": "pandora/resources/box.png",
+      "sha256": "c5fe4abde485dacd020338544c31d7ba5af8ee5284e9903d2cf6daf98687710f",
+      "size": 9877
+    },
+    {
+      "path": "pandora/resources/close_file.png",
+      "sha256": "c188f3a83120e1c042eeb156d2ec40155445bf9cb164ba21b7dc7b21670399cf",
+      "size": 9932
+    },
+    {
+      "path": "pandora/resources/cut_range.png",
+      "sha256": "436d84046f8ca46555a4d8a3e56077eb68c5345d0592ce2199b4e3ce7e350991",
+      "size": 30473
+    },
+    {
+      "path": "pandora/resources/data_analysis.png",
+      "sha256": "5580f23c5ffa2672cea09e5038f6069cee8c5b3be320ebe5a8f2059245db9b4a",
+      "size": 1773
+    },
+    {
+      "path": "pandora/resources/delete.png",
+      "sha256": "baa05873fcf491560c304c57e108bcf90f8f95168833b81b856aaf472ff2b685",
+      "size": 1572
+    },
+    {
+      "path": "pandora/resources/detect_markers.png",
+      "sha256": "2627974972f3270ebafc21045ced6c5740f78d9969f578d898198df7b364109a",
+      "size": 2313
+    },
+    {
+      "path": "pandora/resources/detect_markings.png",
+      "sha256": "37ddbd385d315799e64ddc71b06860f6f3d67e8a5e69c72366968d84e97008e4",
+      "size": 1704367
+    },
+    {
+      "path": "pandora/resources/diff.png",
+      "sha256": "a26fe74590e8cdf86d144d7863e67a34e277143807668ce4836f2e43b6bbc7d0",
+      "size": 4129
+    },
+    {
+      "path": "pandora/resources/folder.png",
+      "sha256": "7964264afc613f9828a04e0005af1a18a24f318fbf44842cb1642702fa5e9515",
+      "size": 5465
+    },
+    {
+      "path": "pandora/resources/form_fit.png",
+      "sha256": "a22442f90d580c0d33fa26e315d8e79b57f9fd180f09b19cfcf8a9034279968e",
+      "size": 585768
+    },
+    {
+      "path": "pandora/resources/fourier_filter.png",
+      "sha256": "272568b6cd080216f1e0c0d41cd1343645545ce925f6171f6b827f63da325e83",
+      "size": 37221
+    },
+    {
+      "path": "pandora/resources/gaussian_blur.png",
+      "sha256": "3ca423be99c244b8d9b026ba3dfa3558829e789f549583672da8d64ca16b326e",
+      "size": 29621
+    },
+    {
+      "path": "pandora/resources/image_metadata.png",
+      "sha256": "34be6b38759599c423b77e1a2eac757d4f3006e30fc8daf7a5417cc24b0f7b7c",
+      "size": 17431
+    },
+    {
+      "path": "pandora/resources/image_slicer.png",
+      "sha256": "ad74604c876aff9de64d38e9bad8e8af244f5e2b12a29aec19068fa47dfd3b05",
+      "size": 9663
+    },
+    {
+      "path": "pandora/resources/import.png",
+      "sha256": "83be44f16c581c46301f93a1cd4dd29c8ab20742043faf15e94d735a5726d47c",
+      "size": 6172
+    },
+    {
+      "path": "pandora/resources/iso2Dpsd.png",
+      "sha256": "4be803fd3fea162e0552f3ed281d71be44051bd64f8434dca376c53b94e6ed68",
+      "size": 1928
+    },
+    {
+      "path": "pandora/resources/karte.png",
+      "sha256": "26209bb8f7b5ff76105f27aea884668c2291792d340631ca0936718c8b53ee73",
+      "size": 18936
+    },
+    {
+      "path": "pandora/resources/light_source_position.png",
+      "sha256": "09f56d12dee6cbef4dc4eea3c7a31dfa468c22b3b7af0f37459b04d0c3b9f910",
+      "size": 20844
+    },
+    {
+      "path": "pandora/resources/line_plot.png",
+      "sha256": "fdacda5fd141586a9619ca69e54c5a5c9194eaee078968cf3331082aa7712e7e",
+      "size": 6147
+    },
+    {
+      "path": "pandora/resources/line_scatter_plot.png",
+      "sha256": "8121fe537d666e10352a92b5fbac0315a6cc84f4d5a6391a9cd5b5b316637eeb",
+      "size": 16329
+    },
+    {
+      "path": "pandora/resources/line_scatter_plot_2.png",
+      "sha256": "560981be7935f96ffc023cf842c4c2c7d2fd9791a66d1f48fca4375ee8525a4a",
+      "size": 20888
+    },
+    {
+      "path": "pandora/resources/list.png",
+      "sha256": "5ed6a2474271b12843b0d70d1942cbf78ac1a8d64a0e43f8131541370d8e8518",
+      "size": 2317
+    },
+    {
+      "path": "pandora/resources/machine_com.png",
+      "sha256": "fe95afa3eeb4e1562a2e87e344c5ec4a1f3b88b9e1ad9d5edb0b27f1f000fbb2",
+      "size": 1752
+    },
+    {
+      "path": "pandora/resources/machine_ctrl.png",
+      "sha256": "a0932f63afb5d1d97540d4adecc31b7f0efe92a11fd9407adc099214bb7a57d2",
+      "size": 2058
+    },
+    {
+      "path": "pandora/resources/maps.png",
+      "sha256": "2e1a073a31532ec00c20eda648cd6be77bb48c4b81ee49963a5a79c15cdf39b1",
+      "size": 70584
+    },
+    {
+      "path": "pandora/resources/maps2.png",
+      "sha256": "fed27291e7077c17660b805bd12c6fdf10d03af4b8382f4df3102ada90047301",
+      "size": 2204
+    },
+    {
+      "path": "pandora/resources/mask_markers.png",
+      "sha256": "ed138000aa7c909e59eeda71fc9b0213e20cacedcf67dc9b7af6e7a88a21a1c5",
+      "size": 1972
+    },
+    {
+      "path": "pandora/resources/mean.png",
+      "sha256": "5a3999122c9195bbc751d6d7b05e2b5a1cd61c5a50090877fee516873fabe026",
+      "size": 2327
+    },
+    {
+      "path": "pandora/resources/nan_button.png",
+      "sha256": "118572669835ae3fe75e62f3068154982fae5d6d8aac80123286c431b7771d26",
+      "size": 4279
+    },
+    {
+      "path": "pandora/resources/outlier.png",
+      "sha256": "10200d7ee52bb0bf3ab8d9f4c7693574a46bc5f1875426d5da48212d13137478",
+      "size": 18399
+    },
+    {
+      "path": "pandora/resources/overlap.png",
+      "sha256": "d80f5103eab47ffca9d3e7b5a8af9085de897284b66f9f3ce456ee9c5d0bb289",
+      "size": 16818
+    },
+    {
+      "path": "pandora/resources/pandora.icns",
+      "sha256": "87885c6334cf836cb0503da2bbb69449ed19cec8692176eb3a6950d006063af9",
+      "size": 238574
+    },
+    {
+      "path": "pandora/resources/pandora.ico",
+      "sha256": "5b9f66f0364ca462e11d999684fe041ce54be59973754e7158180cd29a1042c6",
+      "size": 3098
+    },
+    {
+      "path": "pandora/resources/pandora.png",
+      "sha256": "ca74bf6be07633d916c40896658785b8e635cf2c3a35fbe7c6622488ce23bc4d",
+      "size": 59894
+    },
+    {
+      "path": "pandora/resources/pandora_.png",
+      "sha256": "acb60d74c25e1f9f393ba5cf3fc2bbdbd7b7c3637ed612bd82a31280af7681e9",
+      "size": 2292
+    },
+    {
+      "path": "pandora/resources/path.png",
+      "sha256": "3bfdfe70751728500ea0b73338305ce2b3b4404d2bd2a73cce3e8c1ea463c605",
+      "size": 2099
+    },
+    {
+      "path": "pandora/resources/plane_subtract.png",
+      "sha256": "31a659f46daeecabb231c6df696a58957f6abd43708c7b31f93d89f03043d08f",
+      "size": 8017
+    },
+    {
+      "path": "pandora/resources/plot_data.png",
+      "sha256": "3fbd03b45590678546adb0a5a0539f6561d5126ab949912a4d864231e868fe09",
+      "size": 3071
+    },
+    {
+      "path": "pandora/resources/plot_surface.png",
+      "sha256": "3e13991a099f97f8c96d18119bd8362bf533ef621d7a06204cd4432d342fb651",
+      "size": 983
+    },
+    {
+      "path": "pandora/resources/point_clip.png",
+      "sha256": "69bc89f17beff83c209ad457ba0f60403f399184151025ada1352cbf96dd88b8",
+      "size": 15727
+    },
+    {
+      "path": "pandora/resources/point_cloud.png",
+      "sha256": "9c2a529149e2b01a97c2025b7aa9c1bc918f05d887eb15571a26c09d974ebea5",
+      "size": 26118
+    },
+    {
+      "path": "pandora/resources/polishing_pad.png",
+      "sha256": "916d7bfb9f5fda38ef7d83e3308392eee9826447113ecc6258046089f8ccfbd6",
+      "size": 57592
+    },
+    {
+      "path": "pandora/resources/polyfit_order_6.png",
+      "sha256": "99d554071b57958f6d93074f95168bb8f6be1a527ed5d4eba0ec1ff94aa3c38d",
+      "size": 23409
+    },
+    {
+      "path": "pandora/resources/polynomial_2nd.png",
+      "sha256": "9810f240a0b21b5069864ae0bf2c66e74b619d00038facfeaf4a4c44e308c0a1",
+      "size": 7646
+    },
+    {
+      "path": "pandora/resources/polynomial_3rd.png",
+      "sha256": "1a270ffcae8a2ae1e7226103da5fe2903f144c8741142e606603ebb4abf0c49c",
+      "size": 11017
+    },
+    {
+      "path": "pandora/resources/process_polishing_images.png",
+      "sha256": "a1c6ee0265041d9f9e0b851c52789e00733229a1a07a922a35d16c8d7b265472",
+      "size": 610647
+    },
+    {
+      "path": "pandora/resources/pv.png",
+      "sha256": "7699521cae87fa7388b63ba86441c51a602c189772c120fbf4aae5a1d33b87e2",
+      "size": 2959
+    },
+    {
+      "path": "pandora/resources/quartic_fit.png",
+      "sha256": "81242c00244f133898e31394d7723a3725c336544ff6f8bf292050f5e9bade90",
+      "size": 12329
+    },
+    {
+      "path": "pandora/resources/register_surface.png",
+      "sha256": "daa7da92bfce01ae77be2d22b243c4e09f16ca767e64497ca1f3060f5c4e84b3",
+      "size": 1243681
+    },
+    {
+      "path": "pandora/resources/regression.png",
+      "sha256": "1a250eb1c3118bfdad693272de911a6ebe0c20831236d5a3977a8bb1a5eb0473",
+      "size": 17304
+    },
+    {
+      "path": "pandora/resources/remain.png",
+      "sha256": "c11558ecc82cac64714b0ae98f2c0dee1752f26e1fc30107def98b11e67be2e7",
+      "size": 35115
+    },
+    {
+      "path": "pandora/resources/remove_outliers.png",
+      "sha256": "3eb9d490dfdbe2d18f04df5fe7e92360d1c66d24e362cfc015bcd4c772b2ad24",
+      "size": 12316
+    },
+    {
+      "path": "pandora/resources/remove_outliers_surface.png",
+      "sha256": "8967abb88f73d21c0df99df56f8af443c108e7c76a97d3698d49d39a3e9de1b5",
+      "size": 1554719
+    },
+    {
+      "path": "pandora/resources/reset.png",
+      "sha256": "319ebb465dce84ebb8c216e073ebd144123b945570ec4d88646f90b5b2123697",
+      "size": 14018
+    },
+    {
+      "path": "pandora/resources/reset_plot.png",
+      "sha256": "ca8d7f80b289691c1478dd85bfe52fb8a0870f7eadc2816bd5b9847063f9bf4b",
+      "size": 3846
+    },
+    {
+      "path": "pandora/resources/right_arrow.png",
+      "sha256": "14efd47b038d62170b8972a6df3ed3d7114745df28525d42a3f7ed62b1c87aaa",
+      "size": 1658
+    },
+    {
+      "path": "pandora/resources/rmsd.png",
+      "sha256": "970b1e07eafe2759544b97dfc73bffaf664f6f10ee407feb10303c9694988860",
+      "size": 45736
+    },
+    {
+      "path": "pandora/resources/robot_quat_calc_illustration.png",
+      "sha256": "be1d366727de15be4406cd0b64d53c4bf7d0ac5bf41ec7cc3dde882d65103524",
+      "size": 47343
+    },
+    {
+      "path": "pandora/resources/root_2_scaling.png",
+      "sha256": "322ff9425e165b4cecf5ca67f1e0c48248e3789df1e8b5e2c4235989813f4a81",
+      "size": 15926
+    },
+    {
+      "path": "pandora/resources/roughness.png",
+      "sha256": "ef4b338b9f7eff17eb8f5757c64f232f3667a68a7743996ca834af3b18669a59",
+      "size": 1914
+    },
+    {
+      "path": "pandora/resources/save_data.png",
+      "sha256": "708fd6f98bd7f2d72b344191fc221b19ad4e97bd1c5e47734e248c2564f55018",
+      "size": 1474
+    },
+    {
+      "path": "pandora/resources/scale_surface.png",
+      "sha256": "37498529667afef3890bdb0292e499e751c429f7d85e6501055267fdbab645a3",
+      "size": 753709
+    },
+    {
+      "path": "pandora/resources/scatter_plot.png",
+      "sha256": "40932b93e3698dc461d01f9435139954c31c9ffcd649ffb89059547ae376e767",
+      "size": 14536
+    },
+    {
+      "path": "pandora/resources/schallwelle.png",
+      "sha256": "56b7316e58d7a4c0c16b49188348e59476387ee5fd4f2dfa6ae59d5c9092b548",
+      "size": 7603
+    },
+    {
+      "path": "pandora/resources/scissor.png",
+      "sha256": "ed17f3fb84a3d6aa5a603bdca33bb6573dbd74976d6249bbf380827b8920d71d",
+      "size": 6373
+    },
+    {
+      "path": "pandora/resources/setSection.png",
+      "sha256": "82cd5ec87ade614552c0d0b4d9e42c3edd8b4ca10df7ad9d92eb0c2e827aedaf",
+      "size": 13425
+    },
+    {
+      "path": "pandora/resources/settings.png",
+      "sha256": "488bac3737ee869ab6eb7f6d6807e2c588fc25a921bdf096eef3a8db68d17858",
+      "size": 3348
+    },
+    {
+      "path": "pandora/resources/show_image.png",
+      "sha256": "1fc2c3bb08c28da2a445002ad884eeb7bbb57ed1949648e654cf1fe9451aa494",
+      "size": 45870
+    },
+    {
+      "path": "pandora/resources/show_surface.png",
+      "sha256": "487107d90f93edbe0873d31c010c401c791292e67a7a056cfa49fb8e7e2ec555",
+      "size": 1883
+    },
+    {
+      "path": "pandora/resources/spot_center.png",
+      "sha256": "66e79cb2628ce556c8917ab649b7657ddc403da6f4d2af36832e3910007870f3",
+      "size": 13617
+    },
+    {
+      "path": "pandora/resources/start.png",
+      "sha256": "a96286d3806de2089783c06d5fd71a7bdfc41c3dabe6025203ff46d0c800b40c",
+      "size": 3263
+    },
+    {
+      "path": "pandora/resources/start1.png",
+      "sha256": "7d6ffc1887036cb3fe7d0f8cbcb4537c22938830ce7d0a3694c8c0bb512467c8",
+      "size": 27036
+    },
+    {
+      "path": "pandora/resources/start2.png",
+      "sha256": "d2292dd5a25f950405969fcba5372dfe29cde278fcea66872128d6076b2d688a",
+      "size": 4767
+    },
+    {
+      "path": "pandora/resources/std_dev.png",
+      "sha256": "c6f6461731b7669399580bac249fab38559b226272974e6d431e4a077c464da7",
+      "size": 817
+    },
+    {
+      "path": "pandora/resources/stop.png",
+      "sha256": "39a804e1f47dc07f685dfec3deca240077392606a3b0c7047e289102875adec4",
+      "size": 2857
+    },
+    {
+      "path": "pandora/resources/stop1.png",
+      "sha256": "4c862ca7d7147d7d2b00ea368cd60eb6b472034c5a991151e2ca0ac2578eb3c1",
+      "size": 37423
+    },
+    {
+      "path": "pandora/resources/stop2.png",
+      "sha256": "b5b25debb0780d7ef13beb044548246cf62721f3364ea377017ec42167a21206",
+      "size": 4973
+    },
+    {
+      "path": "pandora/resources/subtract_data.png",
+      "sha256": "99b7f3e4814427bbb055e6d739997505b4ce4d2a9c546ee834e0c159a5e43b70",
+      "size": 1567
+    },
+    {
+      "path": "pandora/resources/subtract_surfaces.png",
+      "sha256": "59b0ecb57fc5bf71efb5bb7501e4a44953e8c7f25dd2349dbd3dc1fc4f189150",
+      "size": 1186491
+    },
+    {
+      "path": "pandora/resources/surface_3D_plot.png",
+      "sha256": "0233b28808ea2610dc3bbfc6935d6eaa58cacf29123fb495691f3755ff781712",
+      "size": 1570108
+    },
+    {
+      "path": "pandora/resources/table.png",
+      "sha256": "8643808f91e8d9f277ca644a19727f91239c17c7a88b69462b539688a7b83443",
+      "size": 4107
+    },
+    {
+      "path": "pandora/resources/tcp.png",
+      "sha256": "887a023c5ac48654e163e01f3322208acadef2dcd7c05cad7e1b65451aa56767",
+      "size": 1615
+    },
+    {
+      "path": "pandora/resources/temperature.png",
+      "sha256": "60950f92f66859e5e51d740083f369e93a5ac8d7b548b00ddd6488d088a1a20a",
+      "size": 4026
+    },
+    {
+      "path": "pandora/resources/threshold.png",
+      "sha256": "40df2393a1882622f8eb35dc5f7e0275b67b66bd51762f43e44f5fde96beba57",
+      "size": 16142
+    },
+    {
+      "path": "pandora/resources/tool.png",
+      "sha256": "fa4a964fe63735a82136a8f41628169d479fa5bb3426f784c923bfbef34a1506",
+      "size": 2658
+    },
+    {
+      "path": "pandora/resources/tool_settings.png",
+      "sha256": "327c8a8e4ca51fcdfb2c8395603429aba397594292c9db7b5fbdd0446942b0a8",
+      "size": 3186
+    },
+    {
+      "path": "pandora/resources/zoom_surface.png",
+      "sha256": "01e8b72bd76f6f767e4fe80a0971b274d4fe3aa26fef19c3fd506c4c7e5385f1",
+      "size": 1566823
     },
     {
       "path": "pandora/settings.xml",
@@ -62,23 +4307,10 @@
       "size": 2642
     }
   ],
-  "notes_url": "https://raw.githubusercontent.com/NicoZettler/pandora-updates/main/0.1.0/release-notes.html",
+  "notes_url": "https://github.com/NicoZettler/pandora-updates/releases/download/v0.1.0/0.1.0/release-notes.html",
   "sig": {
     "alg": "ed25519",
-    "manifest_sig_b64": "5bTndOfH+zuWSFSaNOaswlaoPMkUYxdqvRZBDgmf2AMRkJrEhtw4pTOLgu0nSD49smS8BbUOSbP0Z+EbF1m9Ag=="
+    "manifest_sig_b64": "y6J3oCyDolzVGBlGlb+1HrgBVQ+9twybIEJLkebntUvlQTavfkqUY0d37EHszkU6nXBUnyMUjhJwjLmKIKWEBw=="
   },
-  "patch_url": "https://raw.githubusercontent.com/NicoZettler/pandora-updates/main/0.1.0/pandora-0.1.0-patch.zip",
-  "full_url": "https://raw.githubusercontent.com/NicoZettler/pandora-updates/main/0.1.0/pandora-0.1.0-full.zip",
-  "changed_files": [
-    "pandora/GLOBALS.py",
-    "pandora/IPC.py",
-    "pandora/__init__.py",
-    "pandora/__main__.py",
-    "pandora/app.py",
-    "pandora/basicMath.py",
-    "pandora/datatypes.py",
-    "pandora/math_pcaps.py",
-    "pandora/minimal_test.py",
-    "pandora/update_menu.py"
-  ]
+  "full_url": "https://github.com/NicoZettler/pandora-updates/releases/download/v0.1.0/0.1.0/pandora-0.1.0-full.zip"
 }
